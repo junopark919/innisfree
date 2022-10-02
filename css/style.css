@@ -1,0 +1,22 @@
+/* 
+1. TYPOGRAPHY
+2. COLORS
+- Primary: #024137
+
+*/
+
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+}
