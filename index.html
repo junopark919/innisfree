@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Innisfree official site" />
+    <meta name="description" ccontent="" />
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -19,31 +21,60 @@
     <title>Innisfree | Natural benefits from Jeju Island</title>
   </head>
   <body>
-    <!-- HEADER -->
-    <header class="header">
-      <div class="logo-header"></div>
-      <nav class="nav nav--main">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Products</a>
-        <a href="#">Contact</a>
-      </nav>
+    <!-- HERO AND NAVIGATION -->
+    <header class="hero">
+      <div class="hero__container">
+        <header class="hero__header">
+          <img
+            src="img/header_logo.svg"
+            alt="Innisfree logo"
+            class="hero__header__logo"
+          />
+          <nav class="nav nav--main">
+            <ul class="nav__list">
+              <li><a href="#" class="nav__list--link">Home</a></li>
+              <li><a href="#" class="nav__list--link">About Us</a></li>
+              <li><a href="#" class="nav__list--link">Products</a></li>
+              <li><a href="#" class="nav__list--link">Stores</a></li>
+              <li><a href="#" class="nav__list--link">Contact Us</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="hero__content">
+          <div class="hero__content__text-box">
+            <h1 class="hero__content__title">
+              The strength<br />of Jeju orchid
+            </h1>
+            <p class="hero__content__description">
+              With its extraordinary ability to endure even in the frigid cold,
+              the rare Jeju Orchid has great antioxidant abilities, making it
+              highly effective in anti-aging skin care.
+            </p>
+            <div class="hero__content__cta">
+              <a href="#sec-about" class="btn btn--outline">Learn more</a>
+              <a href="#" class="btn btn--solid">Shop now</a>
+            </div>
+          </div>
+          <div class="hero__content__img-box">
+            <img
+              src="img/orchid_cream.png"
+              alt="Innisfree Youth-enriched Cream with Orchid"
+              class="hero__content__img"
+            />
+            <img
+              src="img/orchid_flower.png"
+              alt="Orchid flower"
+              class="hero__content__img--flower"
+            />
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- MAIN CONTENTS -->
     <main class="main">
-      <!-- HERO -->
-      <section class="section-hero">
-        <h1 class="hero-title">Would you know Jeju Island?</h1>
-        <p class="hero-description"></p>
-        <div class="hero-cta">
-          <a href="#" class="btn">Learn more</a>
-          <a href="#" class="btn">Shop now</a>
-        </div>
-      </section>
-
       <!-- ABOUT -->
-      <section class="section-about">
+      <section class="sec-about" id="sec-about">
         <nav class="nav nav--sub">
           <a href="#">Brand story</a>
           <a href="#">About Jeju Island</a>
@@ -82,6 +113,9 @@
         </div>
       </section>
 
+      <!-- STORES -->
+      <section class="section-stores"></section>
+
       <!-- CONTACT -->
       <section class="section-contact">
         <nav class="nav nav--sub">
@@ -106,5 +140,8 @@
         <p>Copyright &copy; 2022 Innisfree. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <!-- SCRIPT -->
+    <script src="js/script.js"></script>
   </body>
 </html>
