@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Merriweather', serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: #fcfbf4; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 9.6rem; }
+  .header .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 130rem;
+    padding: 3rem;
+    border-bottom: 1px solid #046a38; }
+    .header .main-nav .logo {
+      height: 3rem; }
+    .header .main-nav .main-nav__list {
+      display: flex;
+      list-style: none;
+      gap: 3.2rem;
+      color: #046a38; }
+      .header .main-nav .main-nav__list a:link,
+      .header .main-nav .main-nav__list a:visited {
+        text-decoration: none;
+        color: #046a38;
+        font-size: 1.8rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s; }
+      .header .main-nav .main-nav__list a:hover,
+      .header .main-nav .main-nav__list a:active {
+        border-bottom: 2px solid #046a38; }

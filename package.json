@@ -1,0 +1,14 @@
+{
+  "name": "innisfree",
+  "version": "1.0.0",
+  "description": "a South Korean cosmetics brand website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "author": "Junho Park",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
