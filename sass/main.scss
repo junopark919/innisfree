@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 $color-primary: #004438;
 $color-secondary: #990000;
 $bg-color: #f7f7ee;
 
-// GENERAL
+/********************
+GENERAL
+********************/
 *,
 *::after,
 *::before {
@@ -17,23 +20,25 @@ html {
 }
 
 body {
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   color: #555;
   background-color: $bg-color;
 }
 
+// BUTTON
 .btn:link,
 .btn:visited {
   display: inline-block;
   text-align: center;
-  width: 20rem;
+  width: 18rem;
   text-decoration: none;
   font-size: 2rem;
-  padding: 1.6rem;
+  padding: 1.28rem 1.6rem;
   border: 2px solid $color-primary;
   color: $color-primary;
-  border-radius: 1.5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
   transition: all 0.3s;
 }
 
@@ -55,11 +60,37 @@ body {
   color: $color-primary;
 }
 
-// HEADER SECTION
+// HEADING
+.heading-primary {
+  text-transform: uppercase;
+  font-size: 4.883rem;
+  color: $color-primary;
+  text-align: center;
+  margin-top: 4.883rem;
+  margin-bottom: 2rem;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  color: $color-secondary;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  opacity: 0.8;
+}
+
+.heading-tertinary {
+  font-size: 3.125rem;
+  text-align: center;
+  color: $color-primary;
+}
+
+/********************
+HEADER SECTION
+********************/
 .header {
   display: flex;
   justify-content: center;
-  height: 9.6rem;
 
   .main-nav {
     display: flex;
@@ -67,17 +98,17 @@ body {
     align-items: center;
     width: 100%;
     max-width: 144rem;
-    padding: 3rem;
+    padding: 2.5rem 1.6rem;
     border-bottom: 1px solid $color-primary;
 
     .logo {
-      height: 3rem;
+      height: 3.125rem;
     }
 
     .main-nav__list {
       display: flex;
       list-style: none;
-      gap: 3.2rem;
+      gap: 3.906rem;
       color: $color-primary;
 
       a:link,
@@ -85,24 +116,37 @@ body {
         text-decoration: none;
         color: $color-primary;
         font-size: 2rem;
-        padding-bottom: 0.6rem;
-        border-bottom: 2px solid transparent;
+        position: relative;
+      }
+
+      a:link::after,
+      a:visited::after {
+        content: '';
+        width: 6px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        top: -100%;
+        left: 50%;
         transition: all 0.3s;
       }
 
-      a:hover,
-      a:active {
-        border-bottom: 2px solid $color-primary;
+      a:hover::after,
+      a:active::after {
+        content: '';
+        background: $color-primary;
       }
     }
   }
 }
 
-// HERO SECTION
+/********************
+HERO SECTION
+********************/
 .hero {
   display: flex;
   justify-content: center;
-  height: calc(100vh - 9.6rem);
+  height: calc(100vh - 2.5rem);
 
   .hero__container {
     display: flex;
@@ -117,19 +161,10 @@ body {
       gap: 2rem;
       margin-bottom: 8rem;
 
-      .hero__headline--heading {
-        text-transform: uppercase;
-        font-size: 4.8rem;
-        color: $color-primary;
-        padding-bottom: 2rem;
-        text-align: center;
-        margin-top: 6.4rem;
-      }
-
       .hero__headline--description {
-        font-size: 2rem;
-        width: 80%;
-        padding-bottom: 2rem;
+        color: $color-primary;
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
         text-align: center;
       }
 
@@ -146,6 +181,13 @@ body {
       height: 100%;
       gap: 2rem;
 
+      .hero__img--item {
+        background-position: center;
+        background-size: cover;
+        width: 16%;
+        height: 80%;
+      }
+
       .hero__img--item:nth-child(odd) {
         align-self: flex-start;
         border-radius: 0 0 2rem 2rem;
@@ -158,35 +200,74 @@ body {
 
       .hero__img--item:nth-child(1) {
         background-image: url('img/hero-green-tea.png');
-        background-position: center;
-        background-size: cover;
-        width: 30rem;
-        height: 80%;
       }
 
       .hero__img--item:nth-child(2) {
         background-image: url('img/hero-volcanic-cluster.png');
-        background-position: center;
-        background-size: cover;
-        width: 30rem;
-        height: 80%;
       }
 
       .hero__img--item:nth-child(3) {
         background-image: url('img/hero-tangerine.png');
-        background-position: center;
-        background-size: cover;
-        width: 30rem;
-        height: 80%;
       }
 
       .hero__img--item:nth-child(4) {
         background-image: url('img/hero-bija.png');
-        background-position: center;
-        background-size: cover;
-        width: 30rem;
-        height: 80%;
       }
     }
   }
 }
+
+/********************
+FEATURED SECTION
+********************/
+.featured {
+  display: flex;
+  flex-direction: column;
+  padding: 7.629rem 0;
+  gap: 3.125rem;
+  background-color: #888873;
+
+  p {
+    font-size: 2rem;
+    align-self: center;
+    text-transform: uppercase;
+  }
+
+  .featured__logo {
+    display: flex;
+    justify-content: center;
+    gap: 6.104rem;
+
+    .featured__logo--item {
+      height: 3.906rem;
+      filter: sepia(100%);
+    }
+  }
+}
+
+/********************
+ABOUT SECTION
+********************/
+// .about {
+//   display: flex;
+//   justify-content: center;
+//   padding: 7.629rem;
+
+//   .about__container {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     max-width: 144rem;
+
+//     .sub-nav {
+//       font-size: 2rem;
+
+//       .sub-nav__list {
+//         display: flex;
+//         justify-content: center;
+//         list-style: none;
+//         gap: 2.4rem;
+//       }
+//     }
+//   }
+// }

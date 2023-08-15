@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+/********************
+GENERAL
+********************/
 *,
 *::after,
 *::before {
@@ -10,7 +13,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   color: #555;
   background-color: #f7f7ee; }
@@ -19,13 +22,14 @@ body {
 .btn:visited {
   display: inline-block;
   text-align: center;
-  width: 20rem;
+  width: 18rem;
   text-decoration: none;
   font-size: 2rem;
-  padding: 1.6rem;
+  padding: 1.28rem 1.6rem;
   border: 2px solid #004438;
   color: #004438;
-  border-radius: 1.5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
   transition: all 0.3s; }
 
 .btn:hover,
@@ -43,41 +47,76 @@ body {
   background-color: transparent;
   color: #004438; }
 
+.heading-primary {
+  text-transform: uppercase;
+  font-size: 4.883rem;
+  color: #004438;
+  text-align: center;
+  margin-top: 4.883rem;
+  margin-bottom: 2rem; }
+
+.heading-secondary {
+  font-size: 2rem;
+  color: #990000;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  opacity: 0.8; }
+
+.heading-tertinary {
+  font-size: 3.125rem;
+  text-align: center;
+  color: #004438; }
+
+/********************
+HEADER SECTION
+********************/
 .header {
   display: flex;
-  justify-content: center;
-  height: 9.6rem; }
+  justify-content: center; }
   .header .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 144rem;
-    padding: 3rem;
+    padding: 2.5rem 1.6rem;
     border-bottom: 1px solid #004438; }
     .header .main-nav .logo {
-      height: 3rem; }
+      height: 3.125rem; }
     .header .main-nav .main-nav__list {
       display: flex;
       list-style: none;
-      gap: 3.2rem;
+      gap: 3.906rem;
       color: #004438; }
       .header .main-nav .main-nav__list a:link,
       .header .main-nav .main-nav__list a:visited {
         text-decoration: none;
         color: #004438;
         font-size: 2rem;
-        padding-bottom: 0.6rem;
-        border-bottom: 2px solid transparent;
+        position: relative; }
+      .header .main-nav .main-nav__list a:link::after,
+      .header .main-nav .main-nav__list a:visited::after {
+        content: '';
+        width: 6px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        top: -100%;
+        left: 50%;
         transition: all 0.3s; }
-      .header .main-nav .main-nav__list a:hover,
-      .header .main-nav .main-nav__list a:active {
-        border-bottom: 2px solid #004438; }
+      .header .main-nav .main-nav__list a:hover::after,
+      .header .main-nav .main-nav__list a:active::after {
+        content: '';
+        background: #004438; }
 
+/********************
+HERO SECTION
+********************/
 .hero {
   display: flex;
   justify-content: center;
-  height: calc(100vh - 9.6rem); }
+  height: calc(100vh - 2.5rem); }
   .hero .hero__container {
     display: flex;
     flex-direction: column;
@@ -89,17 +128,10 @@ body {
       align-items: center;
       gap: 2rem;
       margin-bottom: 8rem; }
-      .hero .hero__container .hero__headline .hero__headline--heading {
-        text-transform: uppercase;
-        font-size: 4.8rem;
-        color: #004438;
-        padding-bottom: 2rem;
-        text-align: center;
-        margin-top: 6.4rem; }
       .hero .hero__container .hero__headline .hero__headline--description {
-        font-size: 2rem;
-        width: 80%;
-        padding-bottom: 2rem;
+        color: #004438;
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
         text-align: center; }
       .hero .hero__container .hero__headline .cta {
         display: flex;
@@ -110,6 +142,11 @@ body {
       justify-content: center;
       height: 100%;
       gap: 2rem; }
+      .hero .hero__container .hero__img .hero__img--item {
+        background-position: center;
+        background-size: cover;
+        width: 16%;
+        height: 80%; }
       .hero .hero__container .hero__img .hero__img--item:nth-child(odd) {
         align-self: flex-start;
         border-radius: 0 0 2rem 2rem; }
@@ -117,26 +154,35 @@ body {
         align-self: flex-end;
         border-radius: 2rem 2rem 0 0; }
       .hero .hero__container .hero__img .hero__img--item:nth-child(1) {
-        background-image: url("img/hero-green-tea.png");
-        background-position: center;
-        background-size: cover;
-        width: 30rem;
-        height: 80%; }
+        background-image: url("img/hero-green-tea.png"); }
       .hero .hero__container .hero__img .hero__img--item:nth-child(2) {
-        background-image: url("img/hero-volcanic-cluster.png");
-        background-position: center;
-        background-size: cover;
-        width: 30rem;
-        height: 80%; }
+        background-image: url("img/hero-volcanic-cluster.png"); }
       .hero .hero__container .hero__img .hero__img--item:nth-child(3) {
-        background-image: url("img/hero-tangerine.png");
-        background-position: center;
-        background-size: cover;
-        width: 30rem;
-        height: 80%; }
+        background-image: url("img/hero-tangerine.png"); }
       .hero .hero__container .hero__img .hero__img--item:nth-child(4) {
-        background-image: url("img/hero-bija.png");
-        background-position: center;
-        background-size: cover;
-        width: 30rem;
-        height: 80%; }
+        background-image: url("img/hero-bija.png"); }
+
+/********************
+FEATURED SECTION
+********************/
+.featured {
+  display: flex;
+  flex-direction: column;
+  padding: 7.629rem 0;
+  gap: 3.125rem;
+  background-color: #888873; }
+  .featured p {
+    font-size: 2rem;
+    align-self: center;
+    text-transform: uppercase; }
+  .featured .featured__logo {
+    display: flex;
+    justify-content: center;
+    gap: 6.104rem; }
+    .featured .featured__logo .featured__logo--item {
+      height: 3.906rem;
+      filter: sepia(100%); }
+
+/********************
+ABOUT SECTION
+********************/
