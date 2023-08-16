@@ -1,8 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lora&display=swap');
 $color-primary: #004438;
 $color-secondary: #990000;
+$color-tertiary: #eae6de;
+$color-shadow: #888873;
 $bg-color: #f7f7ee;
+
+@mixin nav-normal {
+  text-decoration: none;
+  color: $color-primary;
+  font-size: 2rem;
+  position: relative;
+}
+
+@mixin nav-hover {
+  content: '';
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  top: -30%;
+  left: 50%;
+  transition: all 0.3s;
+}
 
 /********************
 GENERAL
@@ -20,10 +40,11 @@ html {
 }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lora', serif;
   font-weight: 400;
   color: #555;
   background-color: $bg-color;
+  font-size: 1.6rem;
 }
 
 // BUTTON
@@ -35,39 +56,40 @@ body {
   text-decoration: none;
   font-size: 2rem;
   padding: 1.28rem 1.6rem;
-  border: 2px solid $color-primary;
-  color: $color-primary;
+  border: 2px solid $color-secondary;
+  color: $color-secondary;
   border-radius: 8px;
   text-transform: uppercase;
   transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover,
 .btn:active {
-  background-color: $color-primary;
+  background-color: $color-secondary;
   color: #fff;
 }
 
 .btn--active:link,
 .btn--active:visited {
-  background-color: $color-primary;
+  background-color: $color-secondary;
   color: #fff;
 }
 
 .btn--active:hover,
 .btn--active:active {
   background-color: transparent;
-  color: $color-primary;
+  color: $color-secondary;
 }
 
 // HEADING
 .heading-primary {
-  text-transform: uppercase;
   font-size: 4.883rem;
   color: $color-primary;
   text-align: center;
   margin-top: 4.883rem;
   margin-bottom: 2rem;
+  font-family: 'Cinzel', serif;
 }
 
 .heading-secondary {
@@ -77,12 +99,27 @@ body {
   text-transform: uppercase;
   position: relative;
   opacity: 0.8;
+  margin-bottom: 2.5rem;
+  font-family: 'Cinzel', serif;
 }
 
-.heading-tertinary {
-  font-size: 3.125rem;
+.heading-tertiary {
+  font-size: 3.906rem;
   text-align: center;
   color: $color-primary;
+  position: relative;
+  font-family: 'Cinzel', serif;
+  padding: 3.125rem 0;
+}
+
+.heading-tertiary::after {
+  content: '“';
+  display: inline-block;
+  font-size: 11.921rem;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: -3rem;
 }
 
 /********************
@@ -99,7 +136,6 @@ HEADER SECTION
     width: 100%;
     max-width: 144rem;
     padding: 2.5rem 1.6rem;
-    border-bottom: 1px solid $color-primary;
 
     .logo {
       height: 3.125rem;
@@ -113,22 +149,25 @@ HEADER SECTION
 
       a:link,
       a:visited {
-        text-decoration: none;
-        color: $color-primary;
-        font-size: 2rem;
-        position: relative;
+        // text-decoration: none;
+        // color: $color-primary;
+        // font-size: 2rem;
+        // position: relative;
+        @include nav-normal;
       }
 
       a:link::after,
       a:visited::after {
-        content: '';
-        width: 6px;
-        height: 20px;
-        display: inline-block;
-        position: absolute;
-        top: -100%;
-        left: 50%;
-        transition: all 0.3s;
+        // content: '';
+        // width: 5px;
+        // height: 5px;
+        // display: inline-block;
+        // position: absolute;
+        // border-radius: 50%;
+        // top: -30%;
+        // left: 50%;
+        // transition: all 0.3s;
+        @include nav-hover;
       }
 
       a:hover::after,
@@ -146,7 +185,7 @@ HERO SECTION
 .hero {
   display: flex;
   justify-content: center;
-  height: calc(100vh - 2.5rem);
+  height: calc(100vh - 8.192rem);
 
   .hero__container {
     display: flex;
@@ -162,7 +201,6 @@ HERO SECTION
       margin-bottom: 8rem;
 
       .hero__headline--description {
-        color: $color-primary;
         font-size: 2.5rem;
         margin-bottom: 2.5rem;
         text-align: center;
@@ -225,7 +263,7 @@ FEATURED SECTION
   flex-direction: column;
   padding: 7.629rem 0;
   gap: 3.125rem;
-  background-color: #888873;
+  background-color: $color-tertiary;
 
   p {
     font-size: 2rem;
@@ -239,7 +277,7 @@ FEATURED SECTION
     gap: 6.104rem;
 
     .featured__logo--item {
-      height: 3.906rem;
+      height: 4.883rem;
       filter: sepia(100%);
     }
   }
@@ -248,26 +286,88 @@ FEATURED SECTION
 /********************
 ABOUT SECTION
 ********************/
-// .about {
-//   display: flex;
-//   justify-content: center;
-//   padding: 7.629rem;
+.about {
+  display: flex;
+  justify-content: center;
+  padding: 7.629rem;
 
-//   .about__container {
-//     display: flex;
-//     flex-direction: column;
-//     width: 100%;
-//     max-width: 144rem;
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 144rem;
 
-//     .sub-nav {
-//       font-size: 2rem;
+    .sub-nav {
+      font-size: 2rem;
+      margin-bottom: 6.104rem;
 
-//       .sub-nav__list {
-//         display: flex;
-//         justify-content: center;
-//         list-style: none;
-//         gap: 2.4rem;
-//       }
-//     }
-//   }
-// }
+      .sub-nav__list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 4.883rem;
+
+        a:link,
+        a:visited {
+          @include nav-normal;
+          opacity: 0.8;
+        }
+
+        a:link::after,
+        a:visited::after {
+          @include nav-hover;
+        }
+
+        a:hover::after,
+        a:active::after {
+          content: '';
+          background-color: $color-primary;
+        }
+      }
+    }
+
+    .about__article {
+      display: grid;
+      gap: 3.125rem;
+      grid-template-columns: repeat(2, 1fr);
+
+      .about__content {
+        display: flex;
+        flex-direction: column;
+        gap: 3.125rem;
+
+        .about__content--description {
+          font-size: 2rem;
+          text-align: center;
+          line-height: 1.6;
+        }
+      }
+
+      .about__pledges {
+        display: flex;
+        list-style: none;
+        text-align: center;
+        grid-column: 1 / 3;
+        justify-content: space-around;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2.5rem;
+          background-color: #eae6de;
+          border-radius: 20px;
+          width: 22%;
+          padding: 4.883rem 2.5rem;
+          font-size: 2rem;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+          .about__pledges--img {
+            width: 10rem;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
