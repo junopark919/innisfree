@@ -4,17 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>innisfree</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- HEADER -->
     <header class="header">
-      <nav class="main-nav">
-        <img src="img/logo.svg" alt="innisfree logo" class="logo" />
-        <ul class="main-nav__list">
+      <nav class="header__nav">
+        <img src="img/logo.svg" alt="innisfree logo" class="header__logo" />
+        <ul class="header__nav-list">
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li>
+            <a href="#">Products</a>
+          </li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
@@ -32,7 +38,7 @@
               The premium natural beauty from this mysterious volcanic island
             </p>
             <div class="cta">
-              <a class="btn" href="#">Learn more</a>
+              <a class="btn" href="#about">Learn more</a>
               <a class="btn btn--active" href="#">Shop now</a>
             </div>
           </div>
@@ -78,7 +84,7 @@
       </section>
 
       <!-- ABOUT SECTION -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__container">
           <h2 class="heading-secondary">About us</h2>
           <nav class="sub-nav">
@@ -88,16 +94,17 @@
               <li><a href="#">Ingredients</a></li>
             </ul>
           </nav>
+          <!-- ABOUT BRAND -->
           <article class="about__article">
-            <img
-              src="img/model.jpg"
-              alt="A model with a moisturizer"
-              class="about__img"
-            />
+            <picture class="about__img">
+              <img
+                src="img/model.jpg"
+                alt="A model hoding a moisturizer"
+                class="about__img--item"
+              />
+            </picture>
             <div class="about__content">
-              <h3 class="heading-tertiary">
-                Natural Benefits from Jeju Island
-              </h3>
+              <h3 class="heading-tertiary">About Innisfree</h3>
               <p class="about__content--description">
                 We offer innovative beauty solutions powered by the finest
                 natural ingredients responsibly sourced from Korea’s pristine
@@ -116,40 +123,66 @@
 
             <ul class="about__pledges">
               <li>
-                <img src="img/clean.png" alt="" class="about__pledges--img" />
+                <img src="img/clean.png" alt="" class="about__pledges--icon" />
                 Promote healthy-looking skin with sustainably-sourced
                 ingredients from Jeju Island.
               </li>
               <li>
-                <img src="img/growth.png" alt="" class="about__pledges--img" />
+                <img src="img/growth.png" alt="" class="about__pledges--icon" />
                 Provide innovative and reasonably-priced skin care solutions for
                 all skin types and concerns.
               </li>
               <li>
-                <img src="img/liberty.png" alt="" class="about__pledges--img" />
+                <img
+                  src="img/liberty.png"
+                  alt=""
+                  class="about__pledges--icon"
+                />
                 Offer a sensorial escape through the wonders of Jeju Island
               </li>
               <li>
                 <img
                   src="img/planet-earth.png"
                   alt=""
-                  class="about__pledges--img"
+                  class="about__pledges--icon"
                 />
                 Preserve and protect nature’s vitality through eco-conscious
                 initiatives
               </li>
             </ul>
           </article>
-
+          <!-- ABOUT JEJU ISLAND -->
           <!-- <article class="about__article">
-            <h3 class="heading-tertinary">About Jeju Island</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
-              sunt, quas perferendis enim ut placeat odit dolor. Architecto
-              facere ipsa aspernatur dolore reprehenderit nostrum, at aperiam,
-              atque, laboriosam aliquam consectetur.
-            </p>
-          </article>
+            <div class="about__content">
+              <h3 class="heading-tertiary">
+                Natural Benefits from Jeju Island
+              </h3>
+              <p class="about__content--description">
+                We're all about Jeju Island, a special volcanic place in South
+                Korea. Our skincare is inspired by the unique plants and animals
+                of Jeju.
+                <br /><br />
+                Imagine green fields, clear waters, and colorful plants shaped
+                by volcanic lands. That's Jeju Island, formed by volcanoes. It's
+                a home to special plants and animals you won't find anywhere
+                else.
+                <br /><br />
+                We gather only special ingredients from Jeju, such as Green Tea
+                and Tangerine, to craft our skincare. These treasures carry the
+                island's vitality and are tailored for your skin's well-being.
+                <br /><br />
+                Our commitment to Jeju Island extends beyond skincare. We choose
+                sustainable methods and eco-friendly packaging to pay homage to
+                the island's beauty and preserve it for generations to come.
+                <br /><br />
+                When you use our skincare, you're embracing a piece of Jeju
+                Island. Each product blends nature and science for healthier
+                skin. Our skincare celebrates the beauty of Jeju Island, giving
+                you nature's best. Feel Jeju's wonders in every product you use.
+              </p>
+            </div>
+            <div class="about__img--jeju"></div>
+          </article> -->
 
           <article class="about__article">
             <h3 class="heading-tertinary">Ingredients</h3>
@@ -160,14 +193,10 @@
               <li>Orchid</li>
               <li>Tangerine</li>
               <li>Black Tea</li>
-              <li>Canola Honey</li>
               <li>Bija Tree</li>
               <li>Ginger Honey</li>
-              <li>Aloe</li>
-              <li>Blueberry</li>
-              <li>Apple Seed</li>
             </ul>
-          </article> -->
+          </article>
         </div>
       </section>
     </main>

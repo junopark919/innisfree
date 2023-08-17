@@ -74,7 +74,7 @@ body {
   color: #004438;
   position: relative;
   font-family: 'Cinzel', serif;
-  padding: 3.125rem 0; }
+  display: inline-block; }
 
 .heading-tertiary::after {
   content: '“';
@@ -91,41 +91,42 @@ HEADER SECTION
 .header {
   display: flex;
   justify-content: center; }
-  .header .main-nav {
+  .header .header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 144rem;
-    padding: 2.5rem 1.6rem; }
-    .header .main-nav .logo {
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid #888873; }
+    .header .header__nav .header__logo {
       height: 3.125rem; }
-    .header .main-nav .main-nav__list {
+    .header .header__nav .header__nav-list {
       display: flex;
       list-style: none;
       gap: 3.906rem;
       color: #004438; }
-      .header .main-nav .main-nav__list a:link,
-      .header .main-nav .main-nav__list a:visited {
+      .header .header__nav .header__nav-list a:link,
+      .header .header__nav .header__nav-list a:visited {
         text-decoration: none;
         color: #004438;
         font-size: 2rem;
         position: relative; }
-      .header .main-nav .main-nav__list a:link::after,
-      .header .main-nav .main-nav__list a:visited::after {
+      .header .header__nav .header__nav-list a:link::after,
+      .header .header__nav .header__nav-list a:visited::after {
         content: '';
-        width: 5px;
+        width: 100%;
         height: 5px;
         display: inline-block;
         position: absolute;
-        border-radius: 50%;
-        top: -30%;
+        top: 190%;
         left: 50%;
+        transform: translateX(-50%);
         transition: all 0.3s; }
-      .header .main-nav .main-nav__list a:hover::after,
-      .header .main-nav .main-nav__list a:active::after {
+      .header .header__nav .header__nav-list a:hover::after,
+      .header .header__nav .header__nav-list a:active::after {
         content: '';
-        background: #004438; }
+        background: #888873; }
 
 /********************
 HERO SECTION
@@ -172,11 +173,11 @@ HERO SECTION
       .hero .hero__container .hero__img .hero__img--item:nth-child(1) {
         background-image: url("img/hero-green-tea.png"); }
       .hero .hero__container .hero__img .hero__img--item:nth-child(2) {
-        background-image: url("img/hero-volcanic-cluster.png"); }
+        background-image: url("img/model1.jpg"); }
       .hero .hero__container .hero__img .hero__img--item:nth-child(3) {
         background-image: url("img/hero-tangerine.png"); }
       .hero .hero__container .hero__img .hero__img--item:nth-child(4) {
-        background-image: url("img/hero-bija.png"); }
+        background-image: url("img/model2.jpg"); }
 
 /********************
 FEATURED SECTION
@@ -205,7 +206,7 @@ ABOUT SECTION
 .about {
   display: flex;
   justify-content: center;
-  padding: 7.629rem; }
+  padding: 7.629rem 0; }
   .about .about__container {
     display: flex;
     flex-direction: column;
@@ -221,28 +222,14 @@ ABOUT SECTION
         gap: 4.883rem; }
         .about .about__container .sub-nav .sub-nav__list a:link,
         .about .about__container .sub-nav .sub-nav__list a:visited {
-          text-decoration: none;
-          color: #004438;
-          font-size: 2rem;
-          position: relative;
           opacity: 0.8; }
-        .about .about__container .sub-nav .sub-nav__list a:link::after,
-        .about .about__container .sub-nav .sub-nav__list a:visited::after {
-          content: '';
-          width: 5px;
-          height: 5px;
-          display: inline-block;
-          position: absolute;
-          border-radius: 50%;
-          top: -30%;
-          left: 50%;
-          transition: all 0.3s; }
         .about .about__container .sub-nav .sub-nav__list a:hover::after,
         .about .about__container .sub-nav .sub-nav__list a:active::after {
           content: '';
           background-color: #004438; }
     .about .about__container .about__article {
       display: grid;
+      padding: 7.629rem 0;
       gap: 3.125rem;
       grid-template-columns: repeat(2, 1fr); }
       .about .about__container .about__article .about__content {
@@ -253,6 +240,18 @@ ABOUT SECTION
           font-size: 2rem;
           text-align: center;
           line-height: 1.6; }
+      .about .about__container .about__article .about__img {
+        width: 100%; }
+        .about .about__container .about__article .about__img .about__img--item {
+          width: 100%;
+          height: 100%;
+          border-radius: 0 50% 50% 0; }
+      .about .about__container .about__article .about__img--jeju {
+        background-image: url("img/jeju-mt-halla.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50rem; }
       .about .about__container .about__article .about__pledges {
         display: flex;
         list-style: none;
@@ -270,6 +269,6 @@ ABOUT SECTION
           padding: 4.883rem 2.5rem;
           font-size: 2rem;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
-          .about .about__container .about__article .about__pledges li .about__pledges--img {
+          .about .about__container .about__article .about__pledges li .about__pledges--icon {
             width: 10rem;
             display: block; }
