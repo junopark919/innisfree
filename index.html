@@ -4,107 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>innisfree</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- HEADER -->
-    <header class="header">
-      <nav class="header__nav">
-        <img src="img/logo.svg" alt="innisfree logo" class="header__logo" />
-        <ul class="header__nav-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li>
-            <a href="#">Products</a>
-          </li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
     <main>
       <!-- HERO SECTION -->
-      <section class="hero">
+      <section class="section-hero">
+        <!-- HEADER -->
+        <header class="header">
+          <nav class="header__nav">
+            <a href="#"
+              ><img
+                src="img/logo.svg"
+                alt="innisfree logo"
+                class="header__logo"
+            /></a>
+            <ul class="header__nav-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#section-about">About</a></li>
+              <li>
+                <a href="#">Products</a>
+              </li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
         <div class="hero__container">
           <div class="hero__headline">
             <h1 class="heading-primary">
-              Have you heard of<br />the secret of Jeju island?
+              Have You Heard of the Secret of Jeju Island?
             </h1>
-            <p class="hero__headline--description">
-              The premium natural beauty from this mysterious volcanic island
+            <p class="hero__headline--sub">
+              The premium natural cosmetics only from this mysterious volcanic
+              island in South Korea.
             </p>
-            <div class="cta">
-              <a class="btn" href="#about">Learn more</a>
+            <div class="hero__cta">
+              <a class="btn" href="#section-about">Explore</a>
               <a class="btn btn--active" href="#">Shop now</a>
             </div>
           </div>
-          <div class="hero__img">
-            <div class="hero__img--item"></div>
-            <div class="hero__img--item"></div>
-            <div class="hero__img--item"></div>
-            <div class="hero__img--item"></div>
-          </div>
+          <img src="img/hero/hero.png" alt="" class="hero__img" />
         </div>
       </section>
 
       <!-- FEATURED SECTION -->
-      <section class="featured">
+      <section class="section-featured">
+        <p class="featured__title">As featured in</p>
         <div class="featured__logo">
           <img
-            src="img/logo-vogue.svg"
+            src="img/featured/logo-vogue.svg"
             alt="Vogue"
             class="featured__logo--item"
           />
           <img
-            src="img/logo-allure.svg"
+            src="img/featured/logo-allure.svg"
             alt="Allure"
             class="featured__logo--item"
           />
           <img
-            src="img/logo-vanity-fair.png"
+            src="img/featured/logo-vanity-fair.png"
             alt="Vanity Fair"
             class="featured__logo--item"
           />
           <img
-            src="img/logo-cosmopolitan.png"
+            src="img/featured/logo-cosmopolitan.png"
             alt="Cosmopolitan"
             class="featured__logo--item"
           />
-          <img src="img/logo-gq.svg" alt="GQ" class="featured__logo--item" />
-          <!-- <img
-            src="img/logo-sephora.png"
-            alt="Sephora"
+          <img
+            src="img/featured/bazaar.png"
+            alt="GQ"
             class="featured__logo--item"
-          /> -->
+          />
         </div>
       </section>
 
       <!-- ABOUT SECTION -->
-      <section class="about" id="about">
+      <section class="section-about" id="section-about">
         <div class="about__container">
           <h2 class="heading-secondary">About us</h2>
-          <nav class="sub-nav">
-            <ul class="sub-nav__list">
-              <li><a href="#">Innisfree</a></li>
-              <li><a href="#">Jeju Island</a></li>
-              <li><a href="#">Ingredients</a></li>
-            </ul>
-          </nav>
           <!-- ABOUT BRAND -->
           <article class="about__article">
-            <picture class="about__img">
-              <img
-                src="img/model.jpg"
-                alt="A model hoding a moisturizer"
-                class="about__img--item"
-              />
-            </picture>
+            <div class="about__img"></div>
             <div class="about__content">
-              <h3 class="heading-tertiary">About Innisfree</h3>
+              <h3 class="heading-tertiary">
+                Natural Benefits from Jeju Island
+              </h3>
               <p class="about__content--description">
                 We offer innovative beauty solutions powered by the finest
                 natural ingredients responsibly sourced from Korea’s pristine
@@ -124,13 +109,19 @@
             <ul class="about__pledges">
               <li>
                 <img src="img/clean.png" alt="" class="about__pledges--icon" />
-                Promote healthy-looking skin with sustainably-sourced
-                ingredients from Jeju Island.
+                <h4>Healthy Skin</h4>
+                <p>
+                  Promote healthy-looking skin with sustainably-sourced
+                  ingredients from Jeju Island.
+                </p>
               </li>
               <li>
                 <img src="img/growth.png" alt="" class="about__pledges--icon" />
-                Provide innovative and reasonably-priced skin care solutions for
-                all skin types and concerns.
+                <h4>More Effective</h4>
+                <p>
+                  Provide innovative and reasonably-priced skin care solutions
+                  for all skin types and concerns.
+                </p>
               </li>
               <li>
                 <img
@@ -138,7 +129,10 @@
                   alt=""
                   class="about__pledges--icon"
                 />
-                Offer a sensorial escape through the wonders of Jeju Island
+                <h4>New Experience</h4>
+                <p>
+                  Offer a sensorial escape through the wonders of Jeju Island
+                </p>
               </li>
               <li>
                 <img
@@ -146,45 +140,16 @@
                   alt=""
                   class="about__pledges--icon"
                 />
-                Preserve and protect nature’s vitality through eco-conscious
-                initiatives
+                <h4>Eco-friendly</h4>
+                <p>
+                  Preserve and protect nature’s vitality through eco-conscious
+                  initiatives
+                </p>
               </li>
             </ul>
           </article>
-          <!-- ABOUT JEJU ISLAND -->
-          <!-- <article class="about__article">
-            <div class="about__content">
-              <h3 class="heading-tertiary">
-                Natural Benefits from Jeju Island
-              </h3>
-              <p class="about__content--description">
-                We're all about Jeju Island, a special volcanic place in South
-                Korea. Our skincare is inspired by the unique plants and animals
-                of Jeju.
-                <br /><br />
-                Imagine green fields, clear waters, and colorful plants shaped
-                by volcanic lands. That's Jeju Island, formed by volcanoes. It's
-                a home to special plants and animals you won't find anywhere
-                else.
-                <br /><br />
-                We gather only special ingredients from Jeju, such as Green Tea
-                and Tangerine, to craft our skincare. These treasures carry the
-                island's vitality and are tailored for your skin's well-being.
-                <br /><br />
-                Our commitment to Jeju Island extends beyond skincare. We choose
-                sustainable methods and eco-friendly packaging to pay homage to
-                the island's beauty and preserve it for generations to come.
-                <br /><br />
-                When you use our skincare, you're embracing a piece of Jeju
-                Island. Each product blends nature and science for healthier
-                skin. Our skincare celebrates the beauty of Jeju Island, giving
-                you nature's best. Feel Jeju's wonders in every product you use.
-              </p>
-            </div>
-            <div class="about__img--jeju"></div>
-          </article> -->
 
-          <article class="about__article">
+          <article class="about__ingredients">
             <h3 class="heading-tertinary">Ingredients</h3>
             <ul>
               <li>Green Tea</li>

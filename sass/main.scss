@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+// GUIDLINES
+// FONT-SIZE: 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 42 / 48 / 60 / 72 / 84
 
 $color-primary: #004438;
 $color-secondary: #990000;
@@ -15,8 +17,18 @@ $bg-color: #f7f7ee;
 @mixin nav-list {
   display: flex;
   list-style: none;
-  gap: 3.906rem;
-  color: $color-primary;
+  gap: 4.2rem;
+  font-size: 1.8rem;
+}
+
+@mixin container {
+  display: flex;
+  width: 100%;
+  max-width: 144rem;
+}
+
+@mixin shadow {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /********************
@@ -35,11 +47,45 @@ html {
 }
 
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
-  color: #555;
+  color: #495057;
   background-color: $bg-color;
+  font-size: 1.8rem;
+}
+
+// HEADING
+.heading-primary {
+  font-size: 4.8rem;
+  color: $color-primary;
+  margin-bottom: 3.2rem;
+  text-transform: uppercase;
+}
+
+.heading-secondary {
   font-size: 1.6rem;
+  color: $color-secondary;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.heading-tertiary {
+  font-size: 3.6rem;
+  text-align: center;
+  color: $color-primary;
+  position: relative;
+  display: inline-block;
+}
+
+.heading-tertiary::after {
+  content: '“';
+  display: inline-block;
+  font-size: 10rem;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: -3rem;
 }
 
 // BUTTON
@@ -47,16 +93,14 @@ body {
 .btn:visited {
   display: inline-block;
   text-align: center;
-  width: 18rem;
+  width: 15rem;
   text-decoration: none;
-  font-size: 2rem;
-  padding: 1.28rem 1.6rem;
-  border: 2px solid $color-secondary;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid $color-secondary;
   color: $color-secondary;
   border-radius: 8px;
-  text-transform: uppercase;
   transition: all 0.3s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  @include shadow;
 }
 
 .btn:hover,
@@ -77,169 +121,112 @@ body {
   color: $color-secondary;
 }
 
-// HEADING
-.heading-primary {
-  font-size: 4.883rem;
-  color: $color-primary;
-  text-align: center;
-  margin-top: 4.883rem;
-  margin-bottom: 2rem;
-  font-family: 'Cinzel', serif;
-}
-
-.heading-secondary {
-  font-size: 2rem;
-  color: $color-secondary;
-  text-align: center;
-  text-transform: uppercase;
-  position: relative;
-  opacity: 0.8;
-  margin-bottom: 2.5rem;
-  font-family: 'Cinzel', serif;
-}
-
-.heading-tertiary {
-  font-size: 3.906rem;
-  text-align: center;
-  color: $color-primary;
-  position: relative;
-  font-family: 'Cinzel', serif;
-  display: inline-block;
-}
-
-.heading-tertiary::after {
-  content: '“';
-  display: inline-block;
-  font-size: 11.921rem;
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: -3rem;
-}
-
-/********************
-HEADER SECTION
-********************/
-.header {
-  display: flex;
-  justify-content: center;
-
-  .header__nav {
-    @include nav;
-    width: 100%;
-    max-width: 144rem;
-    padding: 2.5rem 2rem;
-    border-bottom: 1px solid $color-shadow;
-
-    .header__logo {
-      height: 3.125rem;
-    }
-
-    .header__nav-list {
-      @include nav-list;
-
-      a:link,
-      a:visited {
-        text-decoration: none;
-        color: $color-primary;
-        font-size: 2rem;
-        position: relative;
-      }
-
-      a:link::after,
-      a:visited::after {
-        content: '';
-        width: 100%;
-        height: 5px;
-        display: inline-block;
-        position: absolute;
-        top: 190%;
-        left: 50%;
-        transform: translateX(-50%);
-        transition: all 0.3s;
-      }
-
-      a:hover::after,
-      a:active::after {
-        content: '';
-        background: $color-shadow;
-      }
-    }
-  }
-}
-
 /********************
 HERO SECTION
 ********************/
-.hero {
+.section-hero {
   display: flex;
-  justify-content: center;
-  height: calc(100vh - 8.192rem);
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url('img/background.png');
+  background-size: cover;
 
-  .hero__container {
+  // HEADER
+  .header {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 144rem;
+    height: 8.4rem;
+    border-bottom: 1px solid $color-shadow;
 
-    .hero__headline {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      margin-bottom: 8rem;
+    .header__nav {
+      @include nav;
+      width: 100%;
+      max-width: 144rem;
+      padding: 0 2.4rem;
 
-      .hero__headline--description {
-        font-size: 2.5rem;
-        margin-bottom: 2.5rem;
-        text-align: center;
+      .header__logo {
+        height: 2.4rem;
       }
 
-      .cta {
+      .header__nav-list {
+        @include nav-list;
+
+        a:link,
+        a:visited {
+          text-decoration: none;
+          color: $color-shadow;
+          position: relative;
+          transition: all 0.3s;
+        }
+
+        a:hover,
+        a:active {
+          color: $color-primary;
+        }
+
+        a:link::after,
+        a:visited::after {
+          content: '';
+          width: 100%;
+          height: 5px;
+          display: inline-block;
+          position: absolute;
+          top: -122%;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: all 0.3s;
+        }
+
+        a:hover::after,
+        a:active::after {
+          content: '';
+          background: $color-primary;
+        }
+      }
+    }
+  }
+
+  .hero__container {
+    @include container;
+    padding: 0 2.4rem;
+    // padding: 0 2.4rem;
+    justify-content: space-between;
+
+    .hero__headline {
+      width: 48%;
+      margin-bottom: 8rem;
+      align-self: center;
+
+      .hero__headline--sub {
+        font-size: 2rem;
+        margin-bottom: 3.6rem;
+      }
+
+      .hero__cta {
         display: flex;
-        gap: 3rem;
-        padding-bottom: 2rem;
+        gap: 3.125rem;
+      }
+
+      .hero__store {
+        display: flex;
+        height: 1.8rem;
+        gap: 4.2rem;
+
+        img:nth-child(1) {
+          height: 1.2rem;
+        }
       }
     }
 
     .hero__img {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      gap: 2rem;
-
-      .hero__img--item {
-        background-position: center;
-        background-size: cover;
-        width: 16%;
-        height: 80%;
-      }
-
-      .hero__img--item:nth-child(odd) {
-        align-self: flex-start;
-        border-radius: 0 0 2rem 2rem;
-      }
-
-      .hero__img--item:nth-child(even) {
-        align-self: flex-end;
-        border-radius: 2rem 2rem 0 0;
-      }
-
-      .hero__img--item:nth-child(1) {
-        background-image: url('img/hero-green-tea.png');
-      }
-
-      .hero__img--item:nth-child(2) {
-        background-image: url('img/model1.jpg');
-      }
-
-      .hero__img--item:nth-child(3) {
-        background-image: url('img/hero-tangerine.png');
-      }
-
-      .hero__img--item:nth-child(4) {
-        background-image: url('img/model2.jpg');
-      }
+      // background: url('img/hero/model2.jpg');
+      // background-size: cover;
+      // background-position: center;
+      width: 48%;
+      align-self: center;
     }
   }
 }
@@ -247,27 +234,28 @@ HERO SECTION
 /********************
 FEATURED SECTION
 ********************/
-.featured {
+.section-featured {
   display: flex;
   flex-direction: column;
-  padding: 7.629rem 0;
-  gap: 3.125rem;
-  background-color: $color-tertiary;
+  align-items: center;
+  padding: 4.883rem 0;
+  border-bottom: 1px solid $color-shadow;
+  border-top: 1px solid $color-shadow;
 
-  p {
-    font-size: 2rem;
-    align-self: center;
+  .featured__title {
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
     text-transform: uppercase;
   }
 
   .featured__logo {
-    display: flex;
-    justify-content: center;
-    gap: 6.104rem;
+    @include container;
+    justify-content: space-around;
 
     .featured__logo--item {
-      height: 4.883rem;
+      height: 3.906rem;
       filter: sepia(100%);
+      opacity: 0.6;
     }
   }
 }
@@ -275,34 +263,29 @@ FEATURED SECTION
 /********************
 ABOUT SECTION
 ********************/
-.about {
+.section-about {
   display: flex;
   justify-content: center;
-  padding: 7.629rem 0;
+  padding: 9.537rem 0;
 
   .about__container {
-    display: flex;
+    @include container;
     flex-direction: column;
-    width: 100%;
-    max-width: 144rem;
+    align-items: center;
 
-    .sub-nav {
-      font-size: 2rem;
-      margin-bottom: 6.104rem;
+    .about__nav {
+      @include nav;
 
-      .sub-nav__list {
+      .about__nav-list {
         display: flex;
         justify-content: center;
-        list-style: none;
-        gap: 4.883rem;
+        @include nav-list;
 
         a:link,
         a:visited {
+          color: $color-primary;
+          text-decoration: none;
           opacity: 0.8;
-        }
-
-        a:link::after,
-        a:visited::after {
         }
 
         a:hover::after,
@@ -315,9 +298,19 @@ ABOUT SECTION
 
     .about__article {
       display: grid;
+      justify-items: center;
+      align-content: center;
       padding: 7.629rem 0;
       gap: 3.125rem;
       grid-template-columns: repeat(2, 1fr);
+
+      .about__img {
+        background-image: url('img/about-jeju-island.png');
+        background-size: cover;
+        background-position: center;
+
+        width: 80%;
+      }
 
       .about__content {
         display: flex;
@@ -325,14 +318,14 @@ ABOUT SECTION
         gap: 3.125rem;
 
         .about__content--description {
-          font-size: 2rem;
+          // font-size: 2rem;
           text-align: center;
           line-height: 1.6;
         }
       }
 
       .about__img {
-        width: 100%;
+        // width: 100%;
 
         .about__img--item {
           width: 100%;
@@ -354,22 +347,21 @@ ABOUT SECTION
         list-style: none;
         text-align: center;
         grid-column: 1 / 3;
+        padding: 0 2.4rem;
         justify-content: space-around;
 
         li {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 2.5rem;
           background-color: #eae6de;
           border-radius: 20px;
-          width: 22%;
-          padding: 4.883rem 2.5rem;
-          font-size: 2rem;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          width: 20%;
+          padding: 3.906rem 2rem;
+          @include shadow;
 
           .about__pledges--icon {
-            width: 10rem;
+            width: 8rem;
             display: block;
           }
         }
