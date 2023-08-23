@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 /********************
 GENERAL
@@ -26,28 +25,18 @@ body {
   margin-bottom: 3.2rem;
   text-transform: uppercase; }
 
-.heading-secondary {
+.heading-sub {
   font-size: 1.6rem;
   color: #990000;
-  text-align: center;
   text-transform: uppercase;
-  margin-bottom: 2.4rem; }
+  margin-bottom: 3rem; }
 
-.heading-tertiary {
+.heading-secondary {
   font-size: 3.6rem;
-  text-align: center;
   color: #004438;
   position: relative;
-  display: inline-block; }
-
-.heading-tertiary::after {
-  content: '“';
   display: inline-block;
-  font-size: 10rem;
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: -3rem; }
+  margin-bottom: 4.8rem; }
 
 .btn:link,
 .btn:visited {
@@ -147,7 +136,7 @@ HERO SECTION
         margin-bottom: 3.6rem; }
       .section-hero .hero__container .hero__headline .hero__cta {
         display: flex;
-        gap: 3.125rem; }
+        gap: 3rem; }
       .section-hero .hero__container .hero__headline .hero__store {
         display: flex;
         height: 1.8rem;
@@ -165,7 +154,7 @@ FEATURED SECTION
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4.883rem 0;
+  padding: 4.8rem 0;
   border-bottom: 1px solid #888873;
   border-top: 1px solid #888873; }
   .section-featured .featured__title {
@@ -178,9 +167,9 @@ FEATURED SECTION
     max-width: 144rem;
     justify-content: space-around; }
     .section-featured .featured__logo .featured__logo--item {
-      height: 3.906rem;
+      height: 4rem;
       filter: sepia(100%);
-      opacity: 0.6; }
+      opacity: 0.5; }
 
 /********************
 ABOUT SECTION
@@ -188,78 +177,38 @@ ABOUT SECTION
 .section-about {
   display: flex;
   justify-content: center;
-  padding: 9.537rem 0; }
+  padding: 8.4rem 0; }
   .section-about .about__container {
     display: flex;
     width: 100%;
     max-width: 144rem;
     flex-direction: column;
     align-items: center; }
-    .section-about .about__container .about__nav {
+    .section-about .about__container .about__brand {
       display: flex;
       justify-content: space-between;
-      align-items: center; }
-      .section-about .about__container .about__nav .about__nav-list {
-        display: flex;
-        justify-content: center;
-        display: flex;
-        list-style: none;
-        gap: 4.2rem;
-        font-size: 1.8rem; }
-        .section-about .about__container .about__nav .about__nav-list a:link,
-        .section-about .about__container .about__nav .about__nav-list a:visited {
-          color: #004438;
-          text-decoration: none;
-          opacity: 0.8; }
-        .section-about .about__container .about__nav .about__nav-list a:hover::after,
-        .section-about .about__container .about__nav .about__nav-list a:active::after {
-          content: '';
-          background-color: #004438; }
-    .section-about .about__container .about__article {
-      display: grid;
-      justify-items: center;
-      align-content: center;
-      padding: 7.629rem 0;
-      gap: 3.125rem;
-      grid-template-columns: repeat(2, 1fr); }
-      .section-about .about__container .about__article .about__img {
-        background-image: url("img/about-jeju-island.png");
+      align-items: center;
+      padding: 7.2rem 0; }
+      .section-about .about__container .about__brand .brand__img {
+        background-image: url("img/about/about-model-02.jpg");
         background-size: cover;
         background-position: center;
-        width: 80%; }
-      .section-about .about__container .about__article .about__content {
+        width: 45%;
+        height: 100%;
+        position: relative; }
+        .section-about .about__container .about__brand .brand__img::before {
+          content: '';
+          width: 55rem;
+          height: 40rem;
+          background-color: #888873;
+          position: absolute;
+          z-index: -1;
+          bottom: -2.5rem;
+          right: -2.5rem; }
+      .section-about .about__container .about__brand .brand__content {
         display: flex;
         flex-direction: column;
-        gap: 3.125rem; }
-        .section-about .about__container .about__article .about__content .about__content--description {
-          text-align: center;
+        width: 50%;
+        padding: 0 2.4rem; }
+        .section-about .about__container .about__brand .brand__content .brand__description {
           line-height: 1.6; }
-      .section-about .about__container .about__article .about__img .about__img--item {
-        width: 100%;
-        height: 100%;
-        border-radius: 0 50% 50% 0; }
-      .section-about .about__container .about__article .about__img--jeju {
-        background-image: url("img/jeju-mt-halla.jpg");
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 50rem; }
-      .section-about .about__container .about__article .about__pledges {
-        display: flex;
-        list-style: none;
-        text-align: center;
-        grid-column: 1 / 3;
-        padding: 0 2.4rem;
-        justify-content: space-around; }
-        .section-about .about__container .about__article .about__pledges li {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: #eae6de;
-          border-radius: 20px;
-          width: 20%;
-          padding: 3.906rem 2rem;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); }
-          .section-about .about__container .about__article .about__pledges li .about__pledges--icon {
-            width: 8rem;
-            display: block; }
