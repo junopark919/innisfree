@@ -72,8 +72,6 @@ body {
 .heading-secondary {
   font-size: 3.6rem;
   color: $color-primary;
-  position: relative;
-  display: inline-block;
   margin-bottom: 4.8rem;
 }
 
@@ -210,9 +208,6 @@ HERO SECTION
     }
 
     .hero__img {
-      // background: url('img/hero/model2.jpg');
-      // background-size: cover;
-      // background-position: center;
       width: 48%;
       align-self: center;
     }
@@ -254,13 +249,13 @@ ABOUT SECTION
 .section-about {
   display: flex;
   justify-content: center;
-  padding: 10rem 0;
 
   .about__container {
     @include container;
     gap: 12rem;
     flex-direction: column;
     align-items: center;
+    padding: 10rem 2.4rem;
 
     .about__brand {
       display: flex;
@@ -274,17 +269,6 @@ ABOUT SECTION
         width: 45%;
         height: 100%;
         position: relative;
-
-        &::before {
-          content: '';
-          width: 55rem;
-          height: 40rem;
-          background-color: $color-shadow;
-          position: absolute;
-          z-index: -1;
-          bottom: -2.5rem;
-          right: -2.5rem;
-        }
       }
 
       .brand__content {
@@ -312,9 +296,11 @@ ABOUT SECTION
         li {
           display: flex;
           flex-direction: column;
-          width: 23%;
+          width: 22%;
           padding: 2rem 2.4rem;
           border-top: 7px solid $color-primary;
+          // border-top: 4px double $color-shadow;
+          // border-bottom: 4px double $color-shadow;
 
           h4 {
             font-size: 2rem;
@@ -327,6 +313,73 @@ ABOUT SECTION
               margin-right: 1.6rem;
             }
           }
+        }
+      }
+    }
+
+    .about__ingredients {
+      display: flex;
+      flex-direction: column;
+
+      .heading-secondary {
+        text-align: center;
+      }
+
+      .about__nav {
+        @include nav;
+        align-self: center;
+        margin-bottom: 4.8rem;
+
+        .about__nav-list {
+          @include nav-list;
+
+          li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 50%;
+            background-color: $color-tertiary;
+            width: 13rem;
+            height: 13rem;
+            padding: 2rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+            @include shadow;
+
+            img {
+              width: 4rem;
+              margin-bottom: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .ingredients__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+
+        .ingredients__story {
+          width: 100%;
+          padding-left: 5.2rem;
+          padding-right: 4.8rem;
+
+          h4 {
+            font-size: 3.6rem;
+            color: $color-primary;
+            margin-bottom: 2.8rem;
+          }
+
+          p {
+            line-height: 1.7;
+          }
+        }
+
+        .ingredients__img {
+          width: 90%;
         }
       }
     }

@@ -34,8 +34,6 @@ body {
 .heading-secondary {
   font-size: 3.6rem;
   color: #004438;
-  position: relative;
-  display: inline-block;
   margin-bottom: 4.8rem; }
 
 .btn:link,
@@ -176,15 +174,15 @@ ABOUT SECTION
 ********************/
 .section-about {
   display: flex;
-  justify-content: center;
-  padding: 10rem 0; }
+  justify-content: center; }
   .section-about .about__container {
     display: flex;
     width: 100%;
     max-width: 144rem;
     gap: 12rem;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    padding: 10rem 2.4rem; }
     .section-about .about__container .about__brand {
       display: flex;
       justify-content: space-between;
@@ -196,15 +194,6 @@ ABOUT SECTION
         width: 45%;
         height: 100%;
         position: relative; }
-        .section-about .about__container .about__brand .brand__img::before {
-          content: '';
-          width: 55rem;
-          height: 40rem;
-          background-color: #888873;
-          position: absolute;
-          z-index: -1;
-          bottom: -2.5rem;
-          right: -2.5rem; }
       .section-about .about__container .about__brand .brand__content {
         display: flex;
         flex-direction: column;
@@ -223,7 +212,7 @@ ABOUT SECTION
         .section-about .about__container .about__commitment .commitment__list li {
           display: flex;
           flex-direction: column;
-          width: 23%;
+          width: 22%;
           padding: 2rem 2.4rem;
           border-top: 7px solid #004438; }
           .section-about .about__container .about__commitment .commitment__list li h4 {
@@ -234,3 +223,53 @@ ABOUT SECTION
               font-style: italic;
               opacity: 0.3;
               margin-right: 1.6rem; }
+    .section-about .about__container .about__ingredients {
+      display: flex;
+      flex-direction: column; }
+      .section-about .about__container .about__ingredients .heading-secondary {
+        text-align: center; }
+      .section-about .about__container .about__ingredients .about__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        margin-bottom: 4.8rem; }
+        .section-about .about__container .about__ingredients .about__nav .about__nav-list {
+          display: flex;
+          list-style: none;
+          gap: 4.2rem;
+          font-size: 1.8rem; }
+          .section-about .about__container .about__ingredients .about__nav .about__nav-list li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #eae6de;
+            width: 13rem;
+            height: 13rem;
+            padding: 2rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); }
+            .section-about .about__container .about__ingredients .about__nav .about__nav-list li img {
+              width: 4rem;
+              margin-bottom: 1.2rem; }
+      .section-about .about__container .about__ingredients .ingredients__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center; }
+        .section-about .about__container .about__ingredients .ingredients__content .ingredients__story {
+          width: 100%;
+          padding-left: 5.2rem;
+          padding-right: 4.8rem; }
+          .section-about .about__container .about__ingredients .ingredients__content .ingredients__story h4 {
+            font-size: 3.6rem;
+            color: #004438;
+            margin-bottom: 2.8rem; }
+          .section-about .about__container .about__ingredients .ingredients__content .ingredients__story p {
+            line-height: 1.7; }
+        .section-about .about__container .about__ingredients .ingredients__content .ingredients__img {
+          width: 90%; }
