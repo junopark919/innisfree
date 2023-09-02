@@ -7,41 +7,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- HEADER -->
+    <header class="header">
+      <nav class="header__nav container grid grid__cols--3">
+        <a href="#"
+          ><img src="img/logo.svg" alt="innisfree logo" class="header__logo"
+        /></a>
+        <ul class="header__nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#section-about">About</a></li>
+          <li>
+            <a href="#">Products</a>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
       <!-- HERO SECTION -->
       <section class="section-hero">
-        <!-- HEADER -->
-        <header class="header">
-          <nav class="header__nav">
-            <a href="#"
-              ><img
-                src="img/logo.svg"
-                alt="innisfree logo"
-                class="header__logo"
-            /></a>
-            <ul class="header__nav-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#section-about">About</a></li>
-              <li>
-                <a href="#">Products</a>
-              </li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-        </header>
-        <div class="hero__container">
+        <div class="container grid grid__cols--2">
           <div class="hero__headline">
             <h1 class="heading-primary">
               Have You Heard of the Secret of Jeju Island?
             </h1>
             <p class="hero__headline--sub">
-              The premium natural cosmetics only from this mysterious volcanic
-              island in South Korea.
+              The premium natural beauty only from this pure island in South
+              Korea.
             </p>
-            <div class="hero__cta">
-              <a class="btn" href="#section-about">Explore</a>
-              <a class="btn btn--active" href="#">Shop now</a>
-            </div>
+            <a class="btn btn--outline" href="#section-about">Explore</a>
+            <a class="btn btn--full" href="#">Shop now</a>
           </div>
           <img src="img/hero/hero.png" alt="" class="hero__img" />
         </div>
@@ -49,8 +45,7 @@
 
       <!-- FEATURED SECTION -->
       <section class="section-featured">
-        <p class="featured__title">As featured in</p>
-        <div class="featured__logo">
+        <div class="featured__logo container grid grid__cols--5">
           <img
             src="img/featured/logo-vogue.svg"
             alt="Vogue"
@@ -81,131 +76,166 @@
 
       <!-- ABOUT SECTION -->
       <section class="section-about" id="section-about">
-        <div class="about__container">
-          <article class="about__brand">
-            <div class="brand__img"></div>
-            <div class="brand__content">
-              <h2 class="heading-sub">About us</h2>
-              <h3 class="heading-secondary">
-                Natural Benefits from Jeju Island
-              </h3>
-              <p class="brand__description">
-                We offer innovative beauty solutions powered by the finest
-                natural ingredients responsibly sourced from Korea’s pristine
-                Jeju Island.<br /><br />
-                Thanks to its volcanic origins, this fertile oasis has a unique
-                ecosystem with unparalleled resources to nurture beautiful
-                skin.<br /><br />
-                Our proprietary extraction methods preserve the purity and
-                potency of these wholesome ingredients from plant to bottle,
-                offering advanced formulas that safely address all skin concerns
-                without the use of harmful chemicals and preservatives.<br /><br />
-                With the wonders of nature at the heart of innisfree, we take
-                care to preserve and protect the environment in all that we do.
-              </p>
-            </div>
-          </article>
+        <article class="about__brand container grid grid__cols--2">
+          <div class="brand__img"></div>
+          <div class="brand__content">
+            <h2 class="heading-sub">About us</h2>
+            <h3 class="heading-secondary">Natural Benefits from Jeju Island</h3>
+            <p class="brand__description">
+              We offer innovative beauty solutions powered by the finest natural
+              ingredients responsibly sourced from Korea’s pristine Jeju
+              Island.<br /><br />
+              Thanks to its volcanic origins, this fertile oasis has a unique
+              ecosystem with unparalleled resources to nurture beautiful
+              skin.<br /><br />
+              Our proprietary extraction methods preserve the purity and potency
+              of these wholesome ingredients from plant to bottle, offering
+              advanced formulas that safely address all skin concerns without
+              the use of harmful chemicals and preservatives.<br /><br />
+              With the wonders of nature at the heart of innisfree, we take care
+              to preserve and protect the environment in all that we do.
+            </p>
+          </div>
+        </article>
 
-          <article class="about__commitment">
-            <h3 class="heading-secondary">Our Commitment</h3>
-            <ul class="commitment__list">
+        <article class="about__commitment container">
+          <!-- <h3 class="heading-secondary">Our Commitment</h3> -->
+          <ul class="commitment__list grid grid__cols--4">
+            <li>
+              <h4><span>01</span>Skin-friendly</h4>
+              <p>
+                Promote healthy-looking skin with sustainably-sourced
+                ingredients from Jeju Island.
+              </p>
+            </li>
+            <li>
+              <h4><span>02</span>Balanced</h4>
+              <p>
+                Provide innovative and reasonably-priced skin care solutions for
+                all skin types and concerns.
+              </p>
+            </li>
+            <li>
+              <h4><span>03</span>Refreshing</h4>
+              <p>
+                Offer a sensorial escape through the wonders of Jeju Island.
+              </p>
+            </li>
+            <li>
+              <h4><span>04</span>Sustainable</h4>
+              <p>
+                Preserve and protect nature’s vitality through eco-conscious
+                initiatives.
+              </p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="about__ingredients container">
+          <h3 class="heading-secondary">What's in Our Products</h3>
+          <nav class="about__nav">
+            <ul class="about__nav-list">
               <li>
-                <h4><span>01</span>Skin-friendly</h4>
-                <p>
-                  Promote healthy-looking skin with sustainably-sourced
-                  ingredients from Jeju Island.
-                </p>
+                <img src="img/about/icon-tea.png" alt="Green tea" />Green Tea
               </li>
               <li>
-                <h4><span>02</span>Balanced</h4>
-                <p>
-                  Provide innovative and reasonably-priced skin care solutions
-                  for all skin types and concerns.
-                </p>
+                <img
+                  src="img/about/icon-volcano.png"
+                  alt="Volcanic cluster"
+                />Volcanic Cluster
               </li>
               <li>
-                <h4><span>03</span>Refreshing</h4>
-                <p>
-                  Offer a sensorial escape through the wonders of Jeju Island.
-                </p>
+                <img
+                  src="img/about/icon-cherry-blossom.png"
+                  alt="Cherry blossom"
+                />Cherry Blossom
               </li>
               <li>
-                <h4><span>04</span>Sustainable</h4>
-                <p>
-                  Preserve and protect nature’s vitality through eco-conscious
-                  initiatives.
-                </p>
+                <img src="img/about/icon-orchid.png" alt="Orchid" />Orchid
+              </li>
+              <li>
+                <img
+                  src="img/about/icon-tangerine.png"
+                  alt="Tangerine"
+                />Tangerine
+              </li>
+              <li>
+                <img src="img/about/icon-tea.png" alt="Black tea" />Black Tea
+              </li>
+              <li><img src="img/about/icon-bija.png" alt="Bija" />Bija</li>
+              <li>
+                <img src="img/about/icon-honey.png" alt="Ginger honey" />Ginger
+                Honey
               </li>
             </ul>
-          </article>
-
-          <article class="about__ingredients">
-            <h3 class="heading-secondary">What's in Our Products</h3>
-            <nav class="about__nav">
-              <ul class="about__nav-list">
-                <li>
-                  <img src="img/about/icon-tea.png" alt="Green tea" />Green Tea
-                </li>
-                <li>
-                  <img
-                    src="img/about/icon-volcano.png"
-                    alt="Volcanic cluster"
-                  />Volcanic Cluster
-                </li>
-                <li>
-                  <img
-                    src="img/about/icon-cherry-blossom.png"
-                    alt="Cherry blossom"
-                  />Cherry Blossom
-                </li>
-                <li>
-                  <img src="img/about/icon-orchid.png" alt="Orchid" />Orchid
-                </li>
-                <li>
-                  <img
-                    src="img/about/icon-tangerine.png"
-                    alt="Tangerine"
-                  />Tangerine
-                </li>
-                <li>
-                  <img src="img/about/icon-tea.png" alt="Black tea" />Black Tea
-                </li>
-                <li><img src="img/about/icon-bija.png" alt="Bija" />Bija</li>
-                <li>
-                  <img
-                    src="img/about/icon-honey.png"
-                    alt="Ginger honey"
-                  />Ginger Honey
-                </li>
-              </ul>
-            </nav>
-            <div class="ingredients__content">
-              <div class="ingredients__story">
-                <h4>The Story of Green Tea</h4>
-                <p>
-                  Because the Green Tea you drink is not the same variety used
-                  for skincare, we took great care in selecting a breed
-                  specifically for its skincare benefits – not for its flavor.
-                  Born on our USDA-organic farm on Korea’s Jeju Island, the new
-                  Beauty Green Tea was selected from 3,301 varieties. Rich in 16
-                  hydrating amino acids, it’s a variety specialized in skin
-                  moisture.<br /><br />The organic leaves are plucked from the
-                  stem, steamed for 30 seconds to retain nutrients and pressed.
-                  The extract is then stabilized for freshness and purified for
-                  safe application to the skin. We double-squeeze the moisture
-                  from the leaves instead of creating a classic infusion, in
-                  order to best capture their skincare benefits.
-                </p>
-              </div>
-              <img
-                src="img/about/green-tea.png"
-                alt="Green tea"
-                class="ingredients__img"
-              />
+          </nav>
+          <div class="ingredients__content">
+            <div class="ingredients__story">
+              <h4>The Story of Green Tea</h4>
+              <p>
+                Because the Green Tea you drink is not the same variety used for
+                skincare, we took great care in selecting a breed specifically
+                for its skincare benefits – not for its flavor. Born on our
+                USDA-organic farm on Korea’s Jeju Island, the new Beauty Green
+                Tea was selected from 3,301 varieties. Rich in 16 hydrating
+                amino acids, it’s a variety specialized in skin moisture.<br /><br />The
+                organic leaves are plucked from the stem, steamed for 30 seconds
+                to retain nutrients and pressed. The extract is then stabilized
+                for freshness and purified for safe application to the skin. We
+                double-squeeze the moisture from the leaves instead of creating
+                a classic infusion, in order to best capture their skincare
+                benefits.
+              </p>
             </div>
-          </article>
-        </div>
+            <img
+              src="img/about/green-tea.png"
+              alt="Green tea"
+              class="ingredients__img"
+            />
+          </div>
+        </article>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="section-products" id="products">
+        <article class="products container">
+          <div class="products__header">
+            <h2 class="heading-sub">Products</h2>
+            <h3 class="heading-secondary"></h3>
+          </div>
+          <div class="products__filter">
+            <p>Filter by</p>
+            <select class="products__filter--option">
+              <option value="">Skin Concerns</option>
+              <option value="hydration">Hydration</option>
+              <option value="pore solutions">Pore Solutions</option>
+              <option value="brightening">Brightening</option>
+              <option value="anti-aging">Anti-aging</option>
+              <option value="troubled skin">Troubled Skin</option>
+            </select>
+            <select class="products__filter--option">
+              <option value="">Ingredients</option>
+              <option value="greenTea">Green Tea</option>
+              <option value="volcanicClusters">Volcanic Clusters</option>
+              <option value="cherryBlossom">Cherry Blossom</option>
+              <option value="orchid">Orchid</option>
+              <option value="tangerine">Tangerine</option>
+              <option value="blackTea">Black Tea</option>
+              <option value="bija">Bija</option>
+              <option value="gingerHoney">Ginger Honey</option>
+            </select>
+          </div>
+          <div class="products__table grid grid__cols--4">
+            <div class="products__table--item">
+              <img src="" alt="" />
+              <p>Green Tea Hyaluronic Acid Serum</p>
+              <p>$30</p>
+              <a>Add Cart</a>
+            </div>
+          </div>
+        </article>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
