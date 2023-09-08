@@ -65,19 +65,7 @@ const ingredients = {
 const products = {
   greenTea: [
     {
-      name: 'Green Tea Hyaluronic Acid Serum',
-      price: 30,
-      type: 'hydration',
-      stock: true,
-    },
-    {
-      name: 'Green Tea Caffeine Bright-Eye Serum',
-      price: 22,
-      type: 'hydration',
-      stock: true,
-    },
-    {
-      name: 'Green Tea Hyaluronic Acid Cream',
+      name: 'Green Tea Seed Hyaluronic Acid Cream',
       price: 29,
       type: 'hydration',
       stock: true,
@@ -89,19 +77,7 @@ const products = {
       stock: true,
     },
     {
-      name: 'Green Tea Hyaluronic Acid Toner',
-      price: 22,
-      type: 'hydration',
-      stock: true,
-    },
-    {
-      name: 'Green Tea Hyaluronic Acid Toner',
-      price: 22,
-      type: 'hydration',
-      stock: true,
-    },
-    {
-      name: 'Green Tea Hyaluronic Acid Eye Cream',
+      name: 'Green Tea Seed Hyaluronic Acid Eye Cream',
       price: 26,
       type: 'hydration',
       stock: true,

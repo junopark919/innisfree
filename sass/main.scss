@@ -53,11 +53,13 @@ body {
 .container {
   max-width: 144rem;
   width: 100%;
+  padding: 0 2.4rem;
 }
 
 .grid {
   display: grid;
   column-gap: 7.2rem;
+  row-gap: 6.4rem;
 }
 
 .grid__cols--2 {
@@ -209,19 +211,32 @@ HERO SECTION
 
   .container {
     align-items: center;
-    padding-left: 2.4rem;
+    padding: 8.4rem 0 8.4rem 2.4rem;
+    position: relative;
 
     .hero__headline {
-      justify-self: center;
-
       .hero__headline--sub {
         font-size: 2rem;
         margin-bottom: 5.2rem;
+      }
+
+      .hero__stores {
+        display: flex;
+        align-items: start;
+        gap: 3rem;
+        position: absolute;
+        bottom: 8.4rem;
+
+        img {
+          width: 10rem;
+          opacity: 0.8;
+        }
       }
     }
 
     .hero__img {
       width: 100%;
+      border-top-left-radius: 40%;
     }
   }
 }
@@ -233,12 +248,12 @@ FEATURED SECTION
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7.2rem 0;
-  background-color: $color-tertiary;
-  // border-bottom: 1px solid $color-shadow;
-  // border-top: 1px solid $color-shadow;
+  padding: 6rem 0;
+  // background-color: $color-tertiary;
+  border-bottom: 1px solid $color-shadow;
+  border-top: 1px solid $color-shadow;
 
-  .featured__logo {
+  .container {
     justify-items: space-between;
 
     .featured__logo--item {
@@ -257,67 +272,52 @@ ABOUT SECTION
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12rem;
+  gap: 6.4rem;
 
   .about__brand {
-    padding: 10rem 2.4rem;
+    padding: 10rem 2.4rem 0 0;
 
     .brand__img {
       background-image: url('img/about/about-model-02.jpg');
       background-size: cover;
       background-position: center;
-      width: 85%;
+      width: 100%;
       justify-self: center;
-
-      &::before {
-        content: '';
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        background-color: $color-shadow;
-        transform: rotate(-5deg);
-        opacity: 0.5;
-        position: relative;
-        z-index: -1;
-      }
     }
 
     .brand__content {
-      // width: 85%;
       justify-self: center;
     }
   }
 
-  .about__commitment {
-    display: flex;
-    gap: 4rem;
+  .about__offer {
+    padding: 10rem 2.4rem 0;
 
-    .commitment__list {
+    .offer__list {
       list-style: none;
-      padding: 0 2.4rem;
       justify-content: space-between;
-      border-top: 4px double $color-shadow;
-      border-bottom: 4px double $color-shadow;
 
       li {
-        display: flex;
-        flex-direction: column;
-        width: 22%;
-        padding: 3rem 3rem;
-        // border-top: 7px solid $color-primary;
+        // display: flex;
+        // flex-direction: column;
+        align-items: center;
+        padding: 3rem 3.6rem;
+        text-align: center;
+        border-top: 7px solid $color-primary;
         // background-color: $color-tertiary;
-        // @include shadow;
+        // border-radius: 5px;
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.05);
+        line-height: 1.2;
+
+        .offer__list--icon {
+          width: 6.4rem;
+          // margin-bottom: 3rem;
+        }
 
         h4 {
           font-size: 2rem;
           margin-bottom: 2rem;
-
-          span {
-            font-size: 5.2rem;
-            font-style: italic;
-            opacity: 0.3;
-            margin-right: 1.6rem;
-          }
+          display: inline-block;
         }
       }
     }
@@ -327,6 +327,7 @@ ABOUT SECTION
 .about__ingredients {
   display: flex;
   flex-direction: column;
+  padding: 10rem 2.4rem;
 
   .heading-secondary {
     text-align: center;
@@ -334,12 +335,16 @@ ABOUT SECTION
 
   .about__nav {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     margin-bottom: 4.8rem;
 
     .about__nav-list {
-      @include nav-list;
+      // @include nav-list;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
 
       li {
         display: flex;
@@ -347,16 +352,13 @@ ABOUT SECTION
         align-items: center;
         justify-content: center;
         text-align: center;
-        border-radius: 50%;
-        background-color: $color-tertiary;
-        width: 10rem;
-        height: 10rem;
-        padding: 2rem;
         font-size: 1.2rem;
-        @include shadow;
 
         img {
-          width: 3rem;
+          width: 6rem;
+          // padding: 2rem;
+          // border-radius: 50%;
+          // background-color: $color-tertiary;
           margin-bottom: 1.2rem;
         }
       }

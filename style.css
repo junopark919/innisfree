@@ -22,11 +22,13 @@ body {
 
 .container {
   max-width: 144rem;
-  width: 100%; }
+  width: 100%;
+  padding: 0 2.4rem; }
 
 .grid {
   display: grid;
-  column-gap: 7.2rem; }
+  column-gap: 7.2rem;
+  row-gap: 6.4rem; }
 
 .grid__cols--2 {
   grid-template-columns: repeat(2, 1fr); }
@@ -150,14 +152,23 @@ HERO SECTION
   padding-top: 8.4rem; }
   .section-hero .container {
     align-items: center;
-    padding-left: 2.4rem; }
-    .section-hero .container .hero__headline {
-      justify-self: center; }
-      .section-hero .container .hero__headline .hero__headline--sub {
-        font-size: 2rem;
-        margin-bottom: 5.2rem; }
+    padding: 8.4rem 0 8.4rem 2.4rem;
+    position: relative; }
+    .section-hero .container .hero__headline .hero__headline--sub {
+      font-size: 2rem;
+      margin-bottom: 5.2rem; }
+    .section-hero .container .hero__headline .hero__stores {
+      display: flex;
+      align-items: start;
+      gap: 3rem;
+      position: absolute;
+      bottom: 8.4rem; }
+      .section-hero .container .hero__headline .hero__stores img {
+        width: 10rem;
+        opacity: 0.8; }
     .section-hero .container .hero__img {
-      width: 100%; }
+      width: 100%;
+      border-top-left-radius: 40%; }
 
 /********************
 FEATURED SECTION
@@ -166,11 +177,12 @@ FEATURED SECTION
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7.2rem 0;
-  background-color: #eae6de; }
-  .section-featured .featured__logo {
+  padding: 6rem 0;
+  border-bottom: 1px solid #888873;
+  border-top: 1px solid #888873; }
+  .section-featured .container {
     justify-items: space-between; }
-    .section-featured .featured__logo .featured__logo--item {
+    .section-featured .container .featured__logo--item {
       justify-self: center;
       height: 4rem;
       filter: sepia(100%);
@@ -183,80 +195,61 @@ ABOUT SECTION
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12rem; }
+  gap: 6.4rem; }
   .section-about .about__brand {
-    padding: 10rem 2.4rem; }
+    padding: 10rem 2.4rem 0 0; }
     .section-about .about__brand .brand__img {
       background-image: url("img/about/about-model-02.jpg");
       background-size: cover;
       background-position: center;
-      width: 85%;
+      width: 100%;
       justify-self: center; }
-      .section-about .about__brand .brand__img::before {
-        content: '';
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        background-color: #888873;
-        transform: rotate(-5deg);
-        opacity: 0.5;
-        position: relative;
-        z-index: -1; }
     .section-about .about__brand .brand__content {
       justify-self: center; }
-  .section-about .about__commitment {
-    display: flex;
-    gap: 4rem; }
-    .section-about .about__commitment .commitment__list {
+  .section-about .about__offer {
+    padding: 10rem 2.4rem 0; }
+    .section-about .about__offer .offer__list {
       list-style: none;
-      padding: 0 2.4rem;
-      justify-content: space-between;
-      border-top: 4px double #888873;
-      border-bottom: 4px double #888873; }
-      .section-about .about__commitment .commitment__list li {
-        display: flex;
-        flex-direction: column;
-        width: 22%;
-        padding: 3rem 3rem; }
-        .section-about .about__commitment .commitment__list li h4 {
+      justify-content: space-between; }
+      .section-about .about__offer .offer__list li {
+        align-items: center;
+        padding: 3rem 3.6rem;
+        text-align: center;
+        border-top: 7px solid #004438;
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.05);
+        line-height: 1.2; }
+        .section-about .about__offer .offer__list li .offer__list--icon {
+          width: 6.4rem; }
+        .section-about .about__offer .offer__list li h4 {
           font-size: 2rem;
-          margin-bottom: 2rem; }
-          .section-about .about__commitment .commitment__list li h4 span {
-            font-size: 5.2rem;
-            font-style: italic;
-            opacity: 0.3;
-            margin-right: 1.6rem; }
+          margin-bottom: 2rem;
+          display: inline-block; }
 
 .about__ingredients {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 10rem 2.4rem; }
   .about__ingredients .heading-secondary {
     text-align: center; }
   .about__ingredients .about__nav {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     margin-bottom: 4.8rem; }
     .about__ingredients .about__nav .about__nav-list {
       display: flex;
-      list-style: none;
-      gap: 4.2rem;
-      font-size: 1.8rem; }
+      width: 100%;
+      justify-content: space-around; }
       .about__ingredients .about__nav .about__nav-list li {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        border-radius: 50%;
-        background-color: #eae6de;
-        width: 10rem;
-        height: 10rem;
-        padding: 2rem;
-        font-size: 1.2rem;
-        box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.05); }
+        font-size: 1.2rem; }
         .about__ingredients .about__nav .about__nav-list li img {
-          width: 3rem;
+          width: 6rem;
           margin-bottom: 1.2rem; }
   .about__ingredients .ingredients__content {
     display: grid;
