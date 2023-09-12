@@ -210,11 +210,13 @@ HERO SECTION
   padding-top: 8.4rem;
 
   .container {
-    align-items: center;
+    // align-items: center;
     padding: 8.4rem 0 8.4rem 2.4rem;
     position: relative;
 
     .hero__headline {
+      padding-top: 8.4rem;
+
       .hero__headline--sub {
         font-size: 2rem;
         margin-bottom: 5.2rem;
@@ -223,12 +225,13 @@ HERO SECTION
       .hero__stores {
         display: flex;
         align-items: start;
-        gap: 3rem;
+        gap: 3.6rem;
         position: absolute;
         bottom: 8.4rem;
+        filter: sepia(1);
 
         img {
-          width: 10rem;
+          width: 8rem;
           opacity: 0.8;
         }
       }
@@ -236,7 +239,7 @@ HERO SECTION
 
     .hero__img {
       width: 100%;
-      border-top-left-radius: 40%;
+      border-radius: 40% 0 0 0;
     }
   }
 }
@@ -249,9 +252,7 @@ FEATURED SECTION
   align-items: center;
   justify-content: center;
   padding: 6rem 0;
-  // background-color: $color-tertiary;
-  border-bottom: 1px solid $color-shadow;
-  border-top: 1px solid $color-shadow;
+  background-color: $color-tertiary;
 
   .container {
     justify-items: space-between;
@@ -298,20 +299,19 @@ ABOUT SECTION
       justify-content: space-between;
 
       li {
-        // display: flex;
-        // flex-direction: column;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         padding: 3rem 3.6rem;
         text-align: center;
-        border-top: 7px solid $color-primary;
-        // background-color: $color-tertiary;
-        // border-radius: 5px;
+        // border-top: 7px solid $color-primary;
         box-shadow: 0 8px 10px rgba(0, 0, 0, 0.05);
         line-height: 1.2;
+        border-radius: 10px;
 
         .offer__list--icon {
           width: 6.4rem;
-          // margin-bottom: 3rem;
+          margin-bottom: 3rem;
         }
 
         h4 {
@@ -319,6 +319,10 @@ ABOUT SECTION
           margin-bottom: 2rem;
           display: inline-block;
         }
+      }
+
+      li:nth-child(even) {
+        background-color: $color-tertiary;
       }
     }
   }

@@ -151,24 +151,26 @@ HERO SECTION
   background-size: cover;
   padding-top: 8.4rem; }
   .section-hero .container {
-    align-items: center;
     padding: 8.4rem 0 8.4rem 2.4rem;
     position: relative; }
-    .section-hero .container .hero__headline .hero__headline--sub {
-      font-size: 2rem;
-      margin-bottom: 5.2rem; }
-    .section-hero .container .hero__headline .hero__stores {
-      display: flex;
-      align-items: start;
-      gap: 3rem;
-      position: absolute;
-      bottom: 8.4rem; }
-      .section-hero .container .hero__headline .hero__stores img {
-        width: 10rem;
-        opacity: 0.8; }
+    .section-hero .container .hero__headline {
+      padding-top: 8.4rem; }
+      .section-hero .container .hero__headline .hero__headline--sub {
+        font-size: 2rem;
+        margin-bottom: 5.2rem; }
+      .section-hero .container .hero__headline .hero__stores {
+        display: flex;
+        align-items: start;
+        gap: 3.6rem;
+        position: absolute;
+        bottom: 8.4rem;
+        filter: sepia(1); }
+        .section-hero .container .hero__headline .hero__stores img {
+          width: 8rem;
+          opacity: 0.8; }
     .section-hero .container .hero__img {
       width: 100%;
-      border-top-left-radius: 40%; }
+      border-radius: 40% 0 0 0; }
 
 /********************
 FEATURED SECTION
@@ -178,8 +180,7 @@ FEATURED SECTION
   align-items: center;
   justify-content: center;
   padding: 6rem 0;
-  border-bottom: 1px solid #888873;
-  border-top: 1px solid #888873; }
+  background-color: #eae6de; }
   .section-featured .container {
     justify-items: space-between; }
     .section-featured .container .featured__logo--item {
@@ -212,18 +213,23 @@ ABOUT SECTION
       list-style: none;
       justify-content: space-between; }
       .section-about .about__offer .offer__list li {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         padding: 3rem 3.6rem;
         text-align: center;
-        border-top: 7px solid #004438;
         box-shadow: 0 8px 10px rgba(0, 0, 0, 0.05);
-        line-height: 1.2; }
+        line-height: 1.2;
+        border-radius: 10px; }
         .section-about .about__offer .offer__list li .offer__list--icon {
-          width: 6.4rem; }
+          width: 6.4rem;
+          margin-bottom: 3rem; }
         .section-about .about__offer .offer__list li h4 {
           font-size: 2rem;
           margin-bottom: 2rem;
           display: inline-block; }
+      .section-about .about__offer .offer__list li:nth-child(even) {
+        background-color: #eae6de; }
 
 .about__ingredients {
   display: flex;
