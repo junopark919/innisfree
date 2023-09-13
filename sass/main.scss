@@ -404,6 +404,34 @@ ABOUT SECTION
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 10rem;
+  background-color: $color-tertiary;
+
+  .products__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .heading-secondary {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .products__filter {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2.4rem;
+
+    .products__filter--option {
+      padding: 0.8rem;
+      border-radius: 20px;
+      border: 2px solid $color-primary;
+      font-size: 1.8rem;
+      background-color: $bg-color;
+    }
+  }
 }
 
 // ANIMATION

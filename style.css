@@ -284,7 +284,27 @@ ABOUT SECTION
 .section-products {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  padding-top: 10rem;
+  background-color: #eae6de; }
+  .section-products .products__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .section-products .products__header .heading-secondary {
+      margin-bottom: 2rem; }
+  .section-products .products__filter {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2.4rem; }
+    .section-products .products__filter .products__filter--option {
+      padding: 0.8rem;
+      border-radius: 20px;
+      border: 2px solid #004438;
+      font-size: 1.8rem;
+      background-color: #f7f7ee; }
 
 @keyframes nav-effect {
   from {
