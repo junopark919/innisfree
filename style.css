@@ -27,7 +27,6 @@ body {
 
 .grid {
   display: grid;
-  column-gap: 6.4rem;
   row-gap: 6.4rem; }
 
 .grid__cols--2 {
@@ -38,7 +37,8 @@ body {
   grid-template-columns: repeat(3, 1fr); }
 
 .grid__cols--4 {
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 6.4rem; }
 
 .grid__cols--5 {
   grid-template-columns: repeat(5, 1fr);
@@ -243,24 +243,28 @@ ABOUT SECTION
   padding: 10rem 2.4rem; }
   .about__ingredients .heading-secondary {
     text-align: center; }
-  .about__ingredients .header__nav {
+  .about__ingredients .about__nav {
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     margin-bottom: 4.8rem; }
-    .about__ingredients .header__nav .header__nav-list {
+    .about__ingredients .about__nav .about__nav-list {
+      display: flex;
+      list-style: none;
+      gap: 4.2rem;
+      font-size: 1.8rem;
       display: flex;
       width: 100%;
-      justify-content: space-around; }
-      .about__ingredients .header__nav .header__nav-list li {
+      justify-content: space-between; }
+      .about__ingredients .about__nav .about__nav-list li {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        font-size: 1.2rem; }
-        .about__ingredients .header__nav .header__nav-list li img {
+        cursor: pointer; }
+        .about__ingredients .about__nav .about__nav-list li img {
           width: 6rem;
           margin-bottom: 1.2rem; }
   .about__ingredients .ingredients__content {
@@ -268,18 +272,14 @@ ABOUT SECTION
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center; }
-    .about__ingredients .ingredients__content .ingredients__story {
-      width: 100%;
-      padding-left: 5.2rem;
-      padding-right: 4.8rem; }
-      .about__ingredients .ingredients__content .ingredients__story h4 {
-        font-size: 3.6rem;
-        color: #004438;
-        margin-bottom: 2.8rem; }
-      .about__ingredients .ingredients__content .ingredients__story p {
-        line-height: 1.7; }
+    .about__ingredients .ingredients__content .ingredients__story h4 {
+      font-size: 3.6rem;
+      color: #004438;
+      margin-bottom: 2.8rem; }
+    .about__ingredients .ingredients__content .ingredients__story p {
+      line-height: 1.7; }
     .about__ingredients .ingredients__content .ingredients__img {
-      width: 90%; }
+      width: 100%; }
 
 .section-products {
   display: flex;
