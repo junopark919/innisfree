@@ -300,11 +300,31 @@ ABOUT SECTION
     align-items: center;
     gap: 2.4rem; }
     .section-products .products__filter .products__filter--option {
+      width: 20rem;
       padding: 0.8rem;
       border-radius: 20px;
       border: 2px solid #004438;
       font-size: 1.8rem;
       background-color: #f7f7ee; }
+      .section-products .products__filter .products__filter--option option {
+        line-height: 1.2; }
+  .section-products .products__table .products__table--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .section-products .products__table .products__table--item .products__img {
+      width: 100%; }
+    .section-products .products__table .products__table--item .products__title {
+      font-weight: bold; }
+    .section-products .products__table .products__table--item .products__cart {
+      background-color: #004438;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      border-radius: 10px;
+      padding: 1rem;
+      cursor: pointer;
+      box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.05); }
 
 @keyframes nav-effect {
   from {
