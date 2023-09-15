@@ -265,6 +265,84 @@ const productsList = {
       img: 'img/products/tangerine/cream.png',
     },
   ],
+  blackTea: [
+    {
+      name: 'Youth Enhancing Treatment Essence',
+      price: 40,
+      type: 'anti-aging',
+      category: 'serum',
+      stock: true,
+      img: 'img/products/black-tea/essence.png',
+    },
+    {
+      name: 'Youth Enhancing Serum',
+      price: 39,
+      type: 'anti-aging',
+      category: 'serum',
+      stock: true,
+      img: 'img/products/black-tea/serum.png',
+    },
+    {
+      name: 'Youth Enhancing Cream',
+      price: 35,
+      type: 'anti-aging',
+      category: 'moisturizer',
+      stock: true,
+      img: 'img/products/black-tea/cream.png',
+    },
+  ],
+  bija: [
+    {
+      name: 'Clarifying Cleansing Foam',
+      price: 12,
+      type: 'troubled skin',
+      category: 'cleanser',
+      stock: true,
+      img: 'img/products/bija/cleansing-foam.png',
+    },
+    {
+      name: 'Clarifying Toner',
+      price: 19,
+      type: 'troubled skin',
+      category: 'toner',
+      stock: true,
+      img: 'img/products/bija/toner.png',
+    },
+    {
+      name: 'Cica Balm',
+      price: 25,
+      type: 'troubled skin',
+      category: 'balm',
+      stock: true,
+      img: 'img/products/bija/balm.png',
+    },
+    {
+      name: 'Clarifying Spot Serum',
+      price: 18,
+      type: 'troubled skin',
+      category: 'serum',
+      stock: false,
+      img: 'img/products/bija/serum.png',
+    },
+    {
+      name: 'Clarifying Emulsion',
+      price: 19,
+      type: 'troubled skin',
+      category: 'emulsion',
+      stock: true,
+      img: 'img/products/bija/emulsion.png',
+    },
+  ],
+  gingerHoney: [
+    {
+      name: 'Nourishing Ampoule Toner',
+      price: 23,
+      type: 'hydration',
+      category: 'toner',
+      stock: true,
+      img: 'img/products/ginger-honey/toner.png',
+    },
+  ],
 };
 
 const products = document.querySelector('.products__table');
@@ -298,64 +376,3 @@ ingredients.addEventListener('change', () => {
 // ingredientsNav.addEventListenerAll('click', (e) => {
 //   console.log(e);
 // });
-
-// blackTea: [
-//   {
-//     name: 'Youth Enhancing Treatment Essence',
-//     price: 40,
-//     type: 'anti-aging',
-//     stock: true,
-//   },
-//   {
-//     name: 'Youth Enhancing Serum',
-//     price: 39,
-//     type: 'anti-aging',
-//     stock: true,
-//   },
-//   {
-//     name: 'Youth Enhancing Cream',
-//     price: 35,
-//     type: 'anti-aging',
-//     stock: true,
-//   },
-// ],
-// bija: [
-//   {
-//     name: 'Clarifying Cleansing Foam',
-//     price: 12,
-//     type: 'troubled skin',
-//     stock: true,
-//   },
-//   {
-//     name: 'Cica Balm',
-//     price: 25,
-//     type: 'troubled skin',
-//     stock: true,
-//   },
-//   {
-//     name: 'Clarifying Toner',
-//     price: 19,
-//     type: 'troubled skin',
-//     stock: true,
-//   },
-//   {
-//     name: 'Clarifying Emulsion',
-//     price: 19,
-//     type: 'troubled skin',
-//     stock: true,
-//   },
-//   {
-//     name: 'Clarifying Spot Serum',
-//     price: 18,
-//     type: 'troubled skin',
-//     stock: false,
-//   },
-// ],
-// gingerHoney: [
-//   {
-//     name: 'Nourishing Ampoule Toner',
-//     price: 23,
-//     type: 'hydration',
-//     stock: true,
-//   },
-// ]
