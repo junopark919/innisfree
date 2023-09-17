@@ -1,3 +1,5 @@
+'use strict';
+
 const productsList = [
   {
     name: 'Green Tea Amino Acid Face Cleanser',
@@ -409,16 +411,165 @@ const productsList = [
   },
 ];
 
-const products = document.querySelector('.products__table');
-const filter = document.querySelectorAll('.products__filter--option');
-const category = filter[0];
-const skinConcerns = filter[1];
-const ingredients = filter[2];
+const productsHeadline = [
+  {
+    title: 'Most-Loved Best Seller',
+    solution: 'for Your Favorites',
+    description: `Introducing our best-selling product line, a curated selection of skincare essentials designed to transform your daily routine. These customer-favorite products have captured the hearts of countless individuals, delivering effective solutions for a wide range of skin types and concerns.`,
+    img: 'img/products/best-seller.png',
+    source: 'best seller',
+  },
+  {
+    title: 'Green Tea',
+    solution: 'for Long-Lasting Hydration',
+    description: `Long-lasting hydrating Green Tea loaded with amino acids and antioxidants to help replenish and neutralize skin for that natural glow. And the best part? Our tea is organically grown and freshly chosen for skincare from 3,301 Korean native green tea varieties.`,
+    img: 'img/products/green-tea/green-tea.png',
+    source: 'green tea',
+  },
+  {
+    title: 'Volcanic Clusters',
+    solution: 'for Pore Clearing',
+    description: `During the time of volcanic eruptions on Jeju Island, hot lava fragments formed clusters as they solidified. These naturally porous clusters are packed with minerals and have the power to absorb excess oil and impurities from pores.`,
+    img: 'img/products/volcanic-clusters/volcanic-clusters.png',
+    source: 'volcanic clusters',
+  },
+  {
+    title: 'King Cherry Blossom',
+    solution: 'for Better Skin Tone',
+    description: `Called the “King” Cherry Blossom, these Cherry Blossoms are native to the island of Jeju, South Korea. They have the largest flowers among Cherry Blossoms and naturally hold a very sweet fragrance. Its bloom signals Spring has come on Jeju Island. Leaves are squeezed for a potent extract that helps boosts skin radiance for a glowing, clear complexion.`,
+    img: 'img/products/cherry-blossom/cherry-blossom.png',
+    source: 'cherry blossom',
+  },
+  {
+    title: 'Hallan(Jeju Cold-Growing Orchid)',
+    solution: 'for Anti-Aging',
+    description: `With its extraordinary ability to endure even in the frigid cold, the rare Jeju Orchid has great antioxidant abilities, making it highly effective in anti-aging skin care. We extract the active ingredients from every part—from root to petal—to create our Orchidelixir 2.0™, a potent complex of niacinamide, hyaluronic acid and antioxidants to help brighten, hydrate and address early signs of aging.`,
+    img: 'img/products/orchid/orchid.png',
+    source: 'orchid',
+  },
+  {
+    title: 'Hallabong(Jeju Tangerine)',
+    solution: 'for Brightening and Pore Caring',
+    description: `Jeju Tangerines are known for rich Vitamin C content, especially in the peel. The peel also contains various bioflavonoids including hesperidin, an antioxidant that is known to be good for skin. Vitamin C and hesperidin together help protect the skin from external aggressors, visibly brighten and clarify complexion, and helps with visible elasticity and firmness.`,
+    img: 'img/products/tangerine/tangerine.png',
+    source: 'tangerine',
+  },
+  {
+    title: 'Black Tea',
+    solution: 'for Anti-Aging',
+    description: `innisfree Black Tea is naturally fermented Beauty Green Tea*! It’s busting with powerful antioxidants and skin-loving benefits.
+    *Beauty Green Tea is our proprietary USDA organic-certified Green Tea, which harnesses 16 different hydrating amino acids.`,
+    img: 'img/products/black-tea/black-tea.png',
+    source: 'black tea',
+  },
+  {
+    title: 'Bija(Jeju Torreya)',
+    solution: 'for Troubled Skin/Acne',
+    description: `Bija is a precious fruit that takes at least 20 years to grow. This Jeju Island native plant is known for its effectiveness in helping to protect and strengthen skin’s moisture barrier. innisfree specially harnessed Bija Seed Oil to help soothe, improve the look of imperfections, and balance skin.`,
+    img: 'img/products/bija/bija.png',
+    source: 'bija',
+  },
+  {
+    title: 'Ginger Honey',
+    solution: 'for Nourishing Skin',
+    description: `Giney Complex™ is made with two star ingredients: ginger grown from fertile soil filled with condensed nutrients and Jeju Honey gathered from yellow waves of canola flowers that cover the island every spring.`,
+    img: 'img/products/ginger-honey/ginger-honey.png',
+    source: 'ginger honey',
+  },
+  {
+    title: 'Hydration',
+    solution: 'for Dry Skin',
+    description: '',
+    img: 'img/products/hydration.png',
+    source: 'hydration',
+  },
+  {
+    title: 'Pore Solutions',
+    solution: 'for Oily Skin',
+    description: '',
+    img: 'img/products/pore-solutions.png',
+    source: 'pore solutions',
+  },
+  {
+    title: 'Brightening',
+    solution: 'for Dullness and Uneven Skin Tone',
+    description: '',
+    img: 'img/products/brightening.png',
+    source: 'brightening',
+  },
+  {
+    title: 'Anti-Aging',
+    solution: 'for Early Signs of Aging',
+    description: '',
+    img: 'img/products/anti-aging.png',
+    source: 'anti-aging',
+  },
+  {
+    title: 'Troubled Skin',
+    solution: 'for Acne & Oily Skin',
+    description: '',
+    img: 'img/products/troubled-skin.png',
+    source: 'troubled skin',
+  },
+  {
+    title: 'Cleanser',
+    solution: '',
+    description: `Designed to gently but thoroughly cleanse the skin without leaving it stripped.
+    `,
+    img: 'img/products/cleanser.png',
+    source: 'cleanser',
+  },
+  {
+    title: 'Serum & Essenses',
+    solution: '',
+    description: `Hydrating face serums that replenish your skin's moisture and helps address the visible signs of aging for naturally glowing complexion.`,
+    img: 'img/products/serum.png',
+    source: 'serum',
+  },
+  {
+    title: 'Toner',
+    solution: '',
+    description: `Soften and rebalance the skin with Korean toner to maximize absorption of next steps.`,
+    img: 'img/products/toner.png',
+    source: 'toner',
+  },
+  {
+    title: 'Eye Care',
+    solution: '',
+    description: `Easy on the eyes. Hydrate and nourish with textures tailored for the area that ages fastest. Swipe on and tap, tap, tap in your favorite Korean eye cream or serum (or both!) to help smooth out and awaken your best set of assets.`,
+    img: 'img/products/eye-care.png',
+    source: 'eye care',
+  },
+  {
+    title: 'Moisturizer',
+    solution: '',
+    description: `Lock in hydration ─ and your other skincare products ─ all day long! Choose between smooth hydrating Korean face creams for all skin types, lightweight gel creams packed with powerful antioxidants for combination to oily skin, and moisturizing emulsions for healthy luminous glowing complexion that can be used alone or under creams for maximum moisture!`,
+    img: 'img/products/moisturizer.png',
+    source: 'moisturizer',
+  },
+  {
+    title: 'Face Masks',
+    solution: '',
+    description: `Korean beauty face masks are dew-licious skin treats that target your skin's unique concerns and bump your entire routine up a notch. Get to know hydrating Korean sheet masks, pore-caring clay masks with Volcanic Clusters and sleeping masks that work while you catch up on your Zzz's.`,
+    img: 'img/products/face-masks.png',
+    source: 'face masks',
+  },
+];
+
+// PRODUCTS ELEMENTS
+const productsTable = document.querySelector('.products__table');
+const productsHeader = document.querySelector('.products__header');
+
+// PRODUCTS FILTER OPTION
+const filter = document.querySelector('.products__filter--option');
+
+// BEST PRODUCTS
 const best = productsList.filter((product) => product.best === true);
 
+// PRODUCTS ITEMS FUNCTION
 const productsItem = (item) => {
   for (let i = 0; i < item.length; i++) {
-    products.innerHTML += `<div class='products__table--item'>
+    productsTable.innerHTML += `<div class='products__table--item'>
         <img src=${item[i].img} alt=${item[i].name} class='products__img' />
         <p class='products__title'>${item[i].name}</p>
         <p class='products__price'>$${item[i].price}</p>
@@ -429,28 +580,80 @@ const productsItem = (item) => {
   }
 };
 
+// const productsHeaderInfo = (item) => {
+//   const itemList = Array.from(item);
+
+//   for (let i = 1; i < itemList.length; i++) {
+//     if (itemList[i] === ) {
+//       productsHeader.innerHTML = `<div class='products__info'><h3 class='heading-secondary'>${Line}</h3><p class='products__info--solution'>${asdfadfsd}</p><p class='products__info--explanation'></p></div><div class='products__img'></div>`;
+//     }
+//   }
+// };
+
 // const header = () => {
 //   document.querySelector('products__header > .heading-secondary');
 // };
 
-// Default List(Best Products)
+// DEFAULT LIST(BEST PRODUCTS)
 productsItem(best);
 
-const productsFilter = (option, type) => {
-  const item = option.value;
-  const itemInfo = productsList.filter((product) => product[type] === item);
+// PRODUCTS FILTER OPTION
+const productsFilter = (option) => {
+  const item = option[0].value;
 
-  products.innerHTML = '';
+  const itemInfo = productsList.filter(
+    (product) =>
+      product.source === item ||
+      product.type === item ||
+      product.category === item
+  );
 
-  productsItem(itemInfo);
+  productsTable.innerHTML = '';
+
+  if (item === 'best seller') {
+    productsItem(best);
+  } else {
+    productsItem(itemInfo);
+  }
+
+  for (let i = 0; i < filter.length; i++) {
+    if (
+      (productsHeadline[i] && productsHeadline[i].source === item) ||
+      (productsHeadline[i] && productsHeadline[i].type === item) ||
+      (productsHeadline[i] && productsHeadline[i].category === item)
+    ) {
+      productsHeader.innerHTML = `<div class='products__info'><h2 class="heading-sub">Products</h2><h3 class='heading-secondary'>${productsHeadline[i].title} Line</h3><p class='products__info--solution'>${productsHeadline[i].solution}</p><p class='products__info--description'>${productsHeadline[i].description}</p></div><div class='products__img'></div>`;
+
+      const productsHeaderBg = document.querySelector('.products__img');
+
+      productsHeaderBg.style.backgroundImage = `linear-gradient(
+        90deg,
+        #eae6de,
+        transparent
+      ), url(
+        ${productsHeadline[i].img})`;
+      productsHeaderBg.style.backgroundPosition = `
+      ${
+        productsHeadline[i].source === 'orchid'
+          ? 'top right 25%'
+          : 'bottom right 25%'
+      }`;
+      productsHeaderBg.style.backgroundSize = 'cover';
+    }
+  }
+
+  return;
 };
 
-category.addEventListener('change', () => productsFilter(category, 'category'));
+// category.addEventListener('change', () => productsFilter(category, 'category'));
 
-skinConcerns.addEventListener('change', () =>
-  productsFilter(skinConcerns, 'type')
-);
+// skinConcerns.addEventListener('change', () =>
+//   productsFilter(skinConcerns, 'type')
+// );
 
-ingredients.addEventListener('change', () =>
-  productsFilter(ingredients, 'source')
-);
+filter.addEventListener('change', () => {
+  const option = filter.querySelectorAll('option:checked');
+
+  productsFilter(option);
+});
+// () => productsFilter(option, 'source')

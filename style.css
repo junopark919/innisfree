@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 /********************
 GENERAL
 ********************/
@@ -13,7 +13,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lora', serif;
   font-weight: 400;
   color: #495057;
   line-height: 1.5;
@@ -198,9 +198,10 @@ ABOUT SECTION
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4.2rem; }
+  gap: 4.2rem;
+  padding: 10rem 0; }
   .section-about .about__brand {
-    padding: 10rem 2.4rem 0 0; }
+    padding-right: 2.4rem; }
     .section-about .about__brand .brand__img {
       background-image: url("img/about/about-model-02.jpg");
       background-size: cover;
@@ -213,23 +214,20 @@ ABOUT SECTION
     padding: 10rem 2.4rem 0; }
     .section-about .about__offer .offer__list {
       list-style: none;
-      justify-content: space-between; }
+      justify-content: space-between;
+      border-bottom: 1px solid #888873;
+      border-top: 1px solid #888873; }
       .section-about .about__offer .offer__list li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 7.2rem 3.6rem 3.6rem 3.6rem;
+        padding: 3.6rem;
         text-align: center;
-        border-bottom: 7px solid #888873;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.05);
-        line-height: 1.2;
-        position: relative; }
+        line-height: 1.2; }
         .section-about .about__offer .offer__list li .offer__list--icon {
           width: 10rem;
           margin-bottom: 3rem;
-          position: absolute;
           border-radius: 50%;
-          top: -6rem;
           padding: 2rem;
           background-color: #eae6de; }
         .section-about .about__offer .offer__list li h4 {
@@ -292,12 +290,22 @@ ABOUT SECTION
     flex-direction: column; }
     .section-products .products .products__header {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       margin-bottom: 3.6rem; }
-      .section-products .products .products__header .heading-secondary {
-        margin-bottom: 2rem; }
+      .section-products .products .products__header .products__info {
+        display: flex;
+        flex-direction: column; }
+        .section-products .products .products__header .products__info .heading-secondary {
+          margin-bottom: 2.4rem; }
+        .section-products .products .products__header .products__info .products__info--solution {
+          margin-bottom: 3rem;
+          font-style: italic;
+          font-size: 2.4rem; }
+      .section-products .products .products__header .products__img {
+        width: 100%;
+        height: 35rem;
+        background: linear-gradient(90deg, #eae6de, transparent), url("img/products/best-seller.png");
+        background-size: cover;
+        background-position: center right 25%; }
     .section-products .products .products__filter {
       display: flex;
       justify-content: end;
@@ -305,7 +313,7 @@ ABOUT SECTION
       gap: 2.4rem;
       margin-bottom: 3.6rem; }
       .section-products .products .products__filter .products__filter--option {
-        width: 20rem;
+        width: 25rem;
         padding: 0.8rem;
         border-radius: 20px;
         border: 2px solid #004438;
@@ -313,30 +321,62 @@ ABOUT SECTION
         background-color: #f7f7ee; }
         .section-products .products .products__filter .products__filter--option option {
           line-height: 1.2; }
-    .section-products .products .products__table .products__table--item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.2rem; }
-      .section-products .products .products__table .products__table--item .products__img {
-        width: 100%;
-        border-radius: 5px;
-        box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.05); }
-      .section-products .products .products__table .products__table--item .products__title {
-        font-weight: bold;
-        text-align: center; }
-      .section-products .products .products__table .products__table--item .products__cart {
-        background-color: #004438;
-        color: #fff;
-        width: 100%;
-        text-align: center;
+    .section-products .products .products__table {
+      height: 60rem;
+      overflow: auto;
+      padding: 1.6rem; }
+      .section-products .products .products__table::-webkit-scrollbar {
+        background: #f7f7ee;
+        border-radius: 10px; }
+      .section-products .products .products__table::-webkit-scrollbar-thumb {
+        background: #004438;
         border-radius: 10px;
-        padding: 1rem;
-        cursor: pointer;
         box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.05); }
-      .section-products .products .products__table .products__table--item .out-of-stock {
-        background-color: #990000; }
+      .section-products .products .products__table .products__table--item {
+        height: 45rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.2rem;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 1.6rem; }
+        .section-products .products .products__table .products__table--item .products__img {
+          width: 100%; }
+        .section-products .products .products__table .products__table--item .products__title {
+          font-weight: bold;
+          text-align: center; }
+        .section-products .products .products__table .products__table--item .products__cart {
+          background-color: #004438;
+          color: #fff;
+          width: 100%;
+          text-align: center;
+          border-radius: 10px;
+          padding: 1rem;
+          cursor: pointer;
+          box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.05); }
+        .section-products .products .products__table .products__table--item .out-of-stock {
+          background-color: #888873;
+          cursor: default; }
+
+/********************
+CONTACT SECTION
+********************/
+.section-contact {
+  background: url("img/contact/bg.png");
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center; }
+  .section-contact .contact__form {
+    display: flex;
+    flex-direction: column; }
+
+/********************
+FOOTER SECTION
+********************/
+.footer {
+  background-color: #004438; }
 
 @keyframes nav-effect {
   from {

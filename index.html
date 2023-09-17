@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>innisfree&reg; USA Official</title>
+    <title>innisfree&reg; Skin Care | USA Official Site</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -41,11 +41,6 @@
             <div class="hero__stores">
               <img src="img/hero/logo-sephora.png" alt="Sephora" />
               <img src="img/hero/logo-amazon.svg" alt="Amazon" />
-              <img
-                src="img/hero/logo-walmart.svg"
-                target="_blank"
-                alt="Walmart"
-              />
             </div>
           </div>
           <img
@@ -163,7 +158,7 @@
           </ul>
         </article>
 
-        <article class="about__ingredients container">
+        <!-- <article class="about__ingredients container">
           <h3 class="heading-secondary">What's in Our Products</h3>
           <div class="about__nav">
             <ul class="about__nav-list">
@@ -225,54 +220,86 @@
               class="ingredients__img"
             />
           </div>
-        </article>
+        </article> -->
       </section>
 
       <!-- PRODUCTS -->
       <section class="section-products" id="section-products">
         <article class="products container">
-          <h2 class="heading-sub">Products</h2>
-          <div class="products__header">
-            <h3 class="heading-secondary">Green Tea</h3>
-            <p><i>for Long-Lasting Hydration</i></p>
+          <div class="products__header grid grid__cols--2">
+            <div class="products__info">
+              <h2 class="heading-sub">Products</h2>
+              <h3 class="heading-secondary">Most-Loved Best Seller Line</h3>
+              <p class="products__info--solution">for Your Favorites</p>
+              <p class="products__info--description">
+                Introducing our best-selling product line, a curated selection
+                of skincare essentials designed to transform your daily routine.
+                These customer-favorite products have captured the hearts of
+                countless individuals, delivering effective solutions for a wide
+                range of skin types and concerns.
+              </p>
+            </div>
+            <div class="products__img"></div>
           </div>
           <div class="products__filter">
-            <p>Filtered by</p>
             <select class="products__filter--option">
-              <option value="">Category</option>
-              <option value="cleanser">Cleanser</option>
-              <option value="serum">Serum & Essence</option>
-              <option value="toner">Toner</option>
-              <option value="eye care">Eye care</option>
-              <option value="moisturizer">Moisturizer</option>
-              <option value="face masks">Face masks</option>
+              <optgroup label="Featured">
+                <option value="best seller">Best Seller</option>
+              </optgroup>
+              <optgroup label="Ingredients">
+                <option value="green tea">Green Tea</option>
+                <option value="volcanic clusters">Volcanic Clusters</option>
+                <option value="cherry blossom">Cherry Blossom</option>
+                <option value="orchid">Orchid</option>
+                <option value="tangerine">Tangerine</option>
+                <option value="black tea">Black Tea</option>
+                <option value="bija">Bija</option>
+                <option value="ginger honey">Ginger Honey</option>
+              </optgroup>
+              <optgroup label="Skin Concerns">
+                <option value="hydration">Hydration</option>
+                <option value="pore solutions">Pore Solutions</option>
+                <option value="brightening">Brightening</option>
+                <option value="anti-aging">Anti-aging</option>
+                <option value="troubled skin">Troubled Skin</option>
+              </optgroup>
+              <optgroup label="Category">
+                <option value="cleanser">Cleanser</option>
+                <option value="serum">Serum & Essences</option>
+                <option value="toner">Toner</option>
+                <option value="eye care">Eye care</option>
+                <option value="moisturizer">Moisturizer</option>
+                <option value="face masks">Face masks</option>
+              </optgroup>
             </select>
-            <select class="products__filter--option">
-              <option value="">Skin Concerns</option>
-              <option value="hydration">Hydration</option>
-              <option value="pore solutions">Pore Solutions</option>
-              <option value="brightening">Brightening</option>
-              <option value="anti-aging">Anti-aging</option>
-              <option value="troubled skin">Troubled Skin</option>
-            </select>
-            <select class="products__filter--option">
-              <option value="">Ingredients</option>
-              <option value="green tea">Green Tea</option>
-              <option value="volcanic clusters">Volcanic Clusters</option>
-              <option value="cherry blossom">Cherry Blossom</option>
-              <option value="orchid">Orchid</option>
-              <option value="tangerine">Tangerine</option>
-              <option value="black tea">Black Tea</option>
-              <option value="bija">Bija</option>
-              <option value="ginger honey">Ginger Honey</option>
-            </select>
+            <!-- <select class="products__filter--option">
+              <option value="">Sort by</option>
+              <option value="best">Best Selling</option>
+              <option value="low to high">Low to High Price</option>
+              <option value="high to low">High to Low Price</option>
+            </select> -->
           </div>
-          <div class="products__table grid grid__cols--5">
+          <div class="products__table grid grid__cols--4">
             <!-- Products Item List -->
           </div>
         </article>
       </section>
+
+      <!-- CONTACT -->
+      <section class="section-contact">
+        <form class="contact__form container">
+          <h2 class="heading-sub">Contact Us</h2>
+          <h3 class="heading-secondary"></h3>
+          <label>Full Name</label><input type="text" /><label>Email</label
+          ><input type="email" /><label>Your Message</label
+          ><textarea name="" id="" cols="30" rows="10"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">Footer</footer>
     <script src="script.js"></script>
   </body>
 </html>
