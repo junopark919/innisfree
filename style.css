@@ -192,6 +192,49 @@ FEATURED SECTION
       opacity: 0.5; }
 
 /********************
+NEW SECTION
+********************/
+.section-new {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #888873;
+  border-top: 1px solid #888873; }
+  .section-new .new {
+    position: relative;
+    padding-left: 0; }
+    .section-new .new::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 50rem;
+      height: 50rem;
+      opacity: 60%;
+      background: url("img/new/new-product.png");
+      background-size: cover;
+      right: 0;
+      bottom: -5rem;
+      z-index: -1; }
+    .section-new .new .new__image {
+      width: 100%;
+      height: 60rem;
+      background: url("img/new/model-new-product01.png");
+      background-size: cover; }
+    .section-new .new .new__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .section-new .new .new__content .heading-secondary span {
+        font-size: 2.4rem; }
+      .section-new .new .new__content p {
+        margin-bottom: 3.6rem; }
+      .section-new .new .new__content ul {
+        list-style: none;
+        margin-bottom: 5.2rem; }
+        .section-new .new .new__content ul span {
+          color: #990000;
+          font-weight: bold; }
+
+/********************
 ABOUT SECTION
 ********************/
 .section-about {
@@ -201,7 +244,7 @@ ABOUT SECTION
   gap: 4.2rem;
   padding: 10rem 0; }
   .section-about .about__brand {
-    padding-right: 2.4rem; }
+    padding-right: 0; }
     .section-about .about__brand .brand__img {
       background-image: url("img/about/about-model-02.jpg");
       background-size: cover;
@@ -211,12 +254,10 @@ ABOUT SECTION
     .section-about .about__brand .brand__content {
       justify-self: center; }
   .section-about .about__offer {
-    padding: 10rem 2.4rem 0; }
+    padding: 0 2.4rem 0; }
     .section-about .about__offer .offer__list {
       list-style: none;
-      justify-content: space-between;
-      border-bottom: 1px solid #888873;
-      border-top: 1px solid #888873; }
+      justify-content: space-between; }
       .section-about .about__offer .offer__list li {
         display: flex;
         flex-direction: column;
@@ -322,7 +363,7 @@ ABOUT SECTION
         .section-products .products .products__filter .products__filter--option option {
           line-height: 1.2; }
     .section-products .products .products__table {
-      height: 60rem;
+      height: 75rem;
       overflow: auto;
       padding: 1.6rem; }
       .section-products .products .products__table::-webkit-scrollbar {
@@ -365,12 +406,16 @@ CONTACT SECTION
 ********************/
 .section-contact {
   background: url("img/contact/bg.png");
+  background-size: cover;
   padding: 10rem 0;
   display: flex;
   justify-content: center; }
-  .section-contact .contact__form {
-    display: flex;
-    flex-direction: column; }
+  .section-contact .contact__form input {
+    width: 50%; }
+  .section-contact .contact__form textarea {
+    width: 50%; }
+  .section-contact .contact__form button {
+    width: 50%; }
 
 /********************
 FOOTER SECTION

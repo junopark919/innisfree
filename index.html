@@ -19,7 +19,7 @@
           <li>
             <a href="#section-products">Products</a>
           </li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#section-contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -82,10 +82,29 @@
         </div>
       </section>
 
+      <!-- NEW SECTION -->
+      <section class="section-new" id="section-new">
+        <article class="new container grid grid__cols--2">
+          <div class="new__image"></div>
+          <div class="new__content">
+            <h2 class="heading-sub">What's new</h2>
+            <h3 class="heading-secondary">Dewy Glow Jelly Cream — $26<br/><span>with Jeju cherry blossom</span></span></h3>
+            <p class="new__description">
+              Layer Jelly Cream on generously for an added boost of hydration and glow!
+            </p>
+            <ul>
+              <li><span>Cherry Blossom Flavonoids</span>: visibly soothing</li>
+              <li><span>Niacinamide</span>: visibly brightening</li>
+              <li><span>Sugar Beet Betaine</span>: hydrating</li>
+            </ul>
+            <a class="btn btn--outline" href="#section-about">Learn more</a>
+          </div>
+        </article>
+      </section>
+
       <!-- ABOUT SECTION -->
       <section class="section-about" id="section-about">
         <article class="about__brand container grid grid__cols--2">
-          <div class="brand__img"></div>
           <div class="brand__content">
             <h2 class="heading-sub">About us</h2>
             <h3 class="heading-secondary">Natural Benefits from Jeju Island</h3>
@@ -104,6 +123,7 @@
               to preserve and protect the environment in all that we do.
             </p>
           </div>
+          <div class="brand__img"></div>
         </article>
 
         <article class="about__offer container">
@@ -157,79 +177,16 @@
             </li>
           </ul>
         </article>
-
-        <!-- <article class="about__ingredients container">
-          <h3 class="heading-secondary">What's in Our Products</h3>
-          <div class="about__nav">
-            <ul class="about__nav-list">
-              <li>
-                <img src="img/about/icon-tea.svg" alt="Green tea" />Green Tea
-              </li>
-              <li>
-                <img
-                  src="img/about/icon-volcano.svg"
-                  alt="Volcanic cluster"
-                />Volcanic Cluster
-              </li>
-              <li>
-                <img
-                  src="img/about/icon-cherry-blossom.svg"
-                  alt="Cherry blossom"
-                />Cherry Blossom
-              </li>
-              <li>
-                <img src="img/about/icon-orchid.svg" alt="Orchid" />Orchid
-              </li>
-              <li>
-                <img
-                  src="img/about/icon-tangerine.svg"
-                  alt="Tangerine"
-                />Tangerine
-              </li>
-              <li>
-                <img src="img/about/icon-tea.svg" alt="Black tea" />Black Tea
-              </li>
-              <li><img src="img/about/icon-bija.svg" alt="Bija" />Bija</li>
-              <li>
-                <img src="img/about/icon-honey.svg" alt="Ginger honey" />Ginger
-                Honey
-              </li>
-            </ul>
-          </div>
-          <div class="ingredients__content grid grid__cols--2">
-            <div class="ingredients__story">
-              <h4>The Story of Green Tea</h4>
-              <p>
-                Because the Green Tea you drink is not the same variety used for
-                skincare, we took great care in selecting a breed specifically
-                for its skincare benefits – not for its flavor. Born on our
-                USDA-organic farm on Korea’s Jeju Island, the new Beauty Green
-                Tea was selected from 3,301 varieties. Rich in 16 hydrating
-                amino acids, it’s a variety specialized in skin moisture.<br /><br />The
-                organic leaves are plucked from the stem, steamed for 30 seconds
-                to retain nutrients and pressed. The extract is then stabilized
-                for freshness and purified for safe application to the skin. We
-                double-squeeze the moisture from the leaves instead of creating
-                a classic infusion, in order to best capture their skincare
-                benefits.
-              </p>
-            </div>
-            <img
-              src="img/about/green-tea.png"
-              alt="Green tea"
-              class="ingredients__img"
-            />
-          </div>
-        </article> -->
       </section>
 
       <!-- PRODUCTS -->
       <section class="section-products" id="section-products">
         <article class="products container">
+          <!-- Products Line Header -->
           <div class="products__header grid grid__cols--2">
             <div class="products__info">
               <h2 class="heading-sub">Products</h2>
-              <h3 class="heading-secondary">Most-Loved Best Seller Line</h3>
+              <h3 class="heading-secondary">Most-Loved Bestsellers Line</h3>
               <p class="products__info--solution">for Your Favorites</p>
               <p class="products__info--description">
                 Introducing our best-selling product line, a curated selection
@@ -241,10 +198,11 @@
             </div>
             <div class="products__img"></div>
           </div>
+          <!-- Products Filter -->
           <div class="products__filter">
             <select class="products__filter--option">
               <optgroup label="Featured">
-                <option value="best seller">Best Seller</option>
+                <option value="bestsellers">Bestsellers</option>
               </optgroup>
               <optgroup label="Ingredients">
                 <option value="green tea">Green Tea</option>
@@ -272,16 +230,9 @@
                 <option value="face masks">Face masks</option>
               </optgroup>
             </select>
-            <!-- <select class="products__filter--option">
-              <option value="">Sort by</option>
-              <option value="best">Best Selling</option>
-              <option value="low to high">Low to High Price</option>
-              <option value="high to low">High to Low Price</option>
-            </select> -->
           </div>
-          <div class="products__table grid grid__cols--4">
-            <!-- Products Item List -->
-          </div>
+          <!-- Products Item List -->
+          <div class="products__table grid grid__cols--4"></div>
         </article>
       </section>
 
@@ -289,17 +240,21 @@
       <section class="section-contact">
         <form class="contact__form container">
           <h2 class="heading-sub">Contact Us</h2>
-          <h3 class="heading-secondary"></h3>
-          <label>Full Name</label><input type="text" /><label>Email</label
-          ><input type="email" /><label>Your Message</label
-          ><textarea name="" id="" cols="30" rows="10"></textarea>
-          <button type="submit">Submit</button>
+          <h3 class="heading-secondary">Newsletter</h3>
+          <label id="full-name">Name</label
+          ><input type="text" id="full-name" placeholder="Enter your name" /><label id="email">Email</label
+          ><input type="email" id="email" placeholder="Enter your e-mail" />
+          <input type="checkbox" name="" id="agree">
+          <label for="agree">By checking this box, I agree to receive newsletters containing beauty tips, exclusive offers, and product updates.</label>
+          <button type="submit">Sign up</button>
         </form>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">Footer</footer>
+    <footer class="footer">
+      <p>Copyright &copy; 2023 AMOREPACIFIC US Inc. All rights reserved</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
