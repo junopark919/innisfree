@@ -278,7 +278,6 @@ NEW SECTION
   display: flex;
   justify-content: center;
   border-bottom: 1px solid $color-shadow;
-  border-top: 1px solid $color-shadow;
 
   .new {
     // padding: 10rem 2.4rem;
@@ -594,19 +593,35 @@ CONTACT SECTION
   justify-content: center;
 
   .contact__form {
-    // display: flex;
-    // flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    input {
-      width: 50%;
-    }
+    .form__part {
+      margin-bottom: 2rem;
 
-    textarea {
-      width: 50%;
+      input {
+        padding: 1.2rem;
+        font-size: 1.8rem;
+        border-radius: 10px;
+      }
+
+      #agree {
+        margin-right: 1.2rem;
+      }
+
+      #email {
+        width: 60rem;
+      }
     }
 
     button {
-      width: 50%;
+      font-size: 1.8rem;
+      width: 15rem;
+      padding: 1.2rem 1.6rem;
+      background-color: $color-primary;
+      color: #fff;
+      border-radius: 10px;
     }
   }
 }
