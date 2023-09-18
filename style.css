@@ -428,8 +428,15 @@ CONTACT SECTION
       width: 15rem;
       padding: 1.2rem 1.6rem;
       background-color: #004438;
+      border: 1px solid #004438;
       color: #fff;
-      border-radius: 10px; }
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 2.4rem;
+      transition: all 0.3s; }
+      .section-contact .contact__form button:hover {
+        background-color: #336960;
+        border: 1px solid #336960; }
 
 /********************
 FOOTER SECTION
