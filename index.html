@@ -8,11 +8,10 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header">
+    <header class="header normal">
+      <!-- Navigation -->
       <nav class="header__nav container grid grid__cols--3">
-        <a href="#"
-          ><img src="img/logo.svg" alt="innisfree logo" class="header__logo"
-        /></a>
+        <img src="img/logo.svg" alt="innisfree logo" class="header__logo" />
         <ul class="header__nav-list">
           <li><a href="#">Home</a></li>
           <li><a href="#section-about">About</a></li>
@@ -88,16 +87,24 @@
           <div class="new__image"></div>
           <div class="new__content">
             <h2 class="heading-sub">What's new</h2>
-            <h3 class="heading-secondary">Dewy Glow Jelly Cream — $26<br/><span>with Jeju cherry blossom</span></span></h3>
+            <h3 class="heading-secondary">
+              Dewy Glow Jelly Cream ($26)<br /><span
+                ><i>with Jeju cherry blossom</i></span
+              >
+            </h3>
             <p class="new__description">
-              Layer Jelly Cream on generously for an added boost of hydration and glow!
+              Layer Jelly Cream on generously for an added boost of hydration
+              and glow!
             </p>
-            <ul>
-              <li><span>Cherry Blossom Flavonoids</span>: visibly soothing</li>
-              <li><span>Niacinamide</span>: visibly brightening</li>
-              <li><span>Sugar Beet Betaine</span>: hydrating</li>
-            </ul>
             <a class="btn btn--outline" href="#section-about">Learn more</a>
+          </div>
+          <div class="new-line">
+            <h3 class="heading-secondary">Our Latest Products</h3>
+            <div
+              class="products__table products__table--new-line grid grid__cols--4"
+            >
+              <!-- Products Item Card -->
+            </div>
           </div>
         </article>
       </section>
@@ -196,7 +203,7 @@
                 range of skin types and concerns.
               </p>
             </div>
-            <div class="products__img"></div>
+            <div class="products__header--img"></div>
           </div>
           <!-- Products Filter -->
           <div class="products__filter">
@@ -232,12 +239,14 @@
             </select>
           </div>
           <!-- Products Item List -->
-          <div class="products__table grid grid__cols--4"></div>
+          <div class="products__table products__table--all grid grid__cols--4">
+            <!-- Products Item Card -->
+          </div>
         </article>
       </section>
 
       <!-- CONTACT -->
-      <section class="section-contact">
+      <section class="section-contact" id="section-contact">
         <article class="contact container">
           <form class="contact__form">
             <h2 class="heading-sub">Contact Us</h2>
@@ -247,19 +256,56 @@
               <input type="email" id="email" placeholder="Enter your e-mail" />
             </div>
             <div class="form__part">
-              <input type="checkbox" name="" id="agree" /><label for="agree">By checking this box, I agree to receive newsletters containing beauty tips, exclusive offers, and product updates.</label>
+              <input type="checkbox" id="agree" /><label for="agree"
+                >By checking this box, I agree to receive newsletters containing
+                beauty tips, exclusive offers, and product updates.</label
+              >
             </div>
             <button type="submit">Subscribe</button>
           </form>
         </article>
-
       </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-      <p>Copyright &copy; 2023 AMOREPACIFIC US Inc. All rights reserved</p>
+      <div class="container grid grid__cols--2">
+        <img
+          src="img/logo-white.png"
+          alt="innisfree logo"
+          class="footer__logo"
+        />
+        <nav class="footer__nav grid grid__cols--3">
+          <ul>
+            <p>Customer Service</p>
+            <li>FAQs</li>
+            <li>Return Policy</li>
+            <li>Shipping Information</li>
+            <li>Store Locator</li>
+            <li>Contact Us</li>
+            <li>Accessibility</li>
+          </ul>
+          <ul>
+            <p>Welcome to innisfree</p>
+            <li>Natural Benefits from Jeju Island</li>
+            <li>Inniversity</li>
+            <li>Recycle with Us!</li>
+            <li>Our Ingredients Standard</li>
+          </ul>
+          <ul>
+            <p>Rewards</p>
+            <li>inni-Friend Rewards</li>
+            <li>Limited Time: Give $10, Get $10!</li>
+            <li>Sign up for Text & Get $10 Off</li>
+            <li>Membership Terms</li>
+          </ul>
+        </nav>
+        <p class="copyright">
+          Copyright &copy; 2023 AMOREPACIFIC US Inc. All rights reserved
+        </p>
+      </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

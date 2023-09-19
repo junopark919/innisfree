@@ -1,5 +1,6 @@
 'use strict';
 
+// PRODUCTS DATA
 const productsList = [
   {
     name: 'Green Tea Amino Acid Face Cleanser',
@@ -597,46 +598,49 @@ const productsHeadline = [
   },
 ];
 
+// STICKY NAVIGATION BAR
+const nav = document.querySelector('.header');
+
+window.onscroll = (e) => {
+  if (window.scrollY) {
+    nav.classList.remove('normal');
+    nav.classList.add('sticky');
+  } else {
+    nav.classList.remove('sticky');
+    nav.classList.add('normal');
+  }
+};
+
 // PRODUCTS ELEMENTS
-const productsTable = document.querySelector('.products__table');
 const productsHeader = document.querySelector('.products__header');
+const productsTable = document.querySelector('.products__table--all');
+const newLineTable = document.querySelector('.products__table--new-line');
 
 // PRODUCTS FILTER OPTION
 const filter = document.querySelector('.products__filter--option');
 
 // BEST PRODUCTS
 const best = productsList.filter((product) => product.best === true);
+const newLine = productsList.filter((product) => product.new === true);
 
 // PRODUCTS ITEMS FUNCTION
-const productsItem = (item) => {
+const productsItem = (item, table) => {
   for (let i = 0; i < item.length; i++) {
-    productsTable.innerHTML += `<div class='products__table--item'>
+    table.innerHTML += `<div class='products__table--item'>
         <img src=${item[i].img} alt=${item[i].name} class='products__img' />
         <p class='products__title'>${item[i].name}</p>
         <p class='products__price'>$${item[i].price}</p>
         <a class='products__cart ${item[i].stock ? '' : 'out-of-stock'}'>${
       item[i].stock ? 'Add Cart' : 'Out of Stock'
-    }</a>
-      </div>`;
+    }</a></div>`;
   }
 };
 
-// const productsHeaderInfo = (item) => {
-//   const itemList = Array.from(item);
-
-//   for (let i = 1; i < itemList.length; i++) {
-//     if (itemList[i] === ) {
-//       productsHeader.innerHTML = `<div class='products__info'><h3 class='heading-secondary'>${Line}</h3><p class='products__info--solution'>${asdfadfsd}</p><p class='products__info--explanation'></p></div><div class='products__img'></div>`;
-//     }
-//   }
-// };
-
-// const header = () => {
-//   document.querySelector('products__header > .heading-secondary');
-// };
+// NEW LINE LIST
+productsItem(newLine, newLineTable);
 
 // DEFAULT LIST(BEST PRODUCTS)
-productsItem(best);
+productsItem(best, productsTable);
 
 // PRODUCTS FILTER OPTION
 const productsFilter = (option) => {
@@ -652,9 +656,9 @@ const productsFilter = (option) => {
   productsTable.innerHTML = '';
 
   if (item === 'bestsellers') {
-    productsItem(best);
+    productsItem(best, productsTable);
   } else {
-    productsItem(itemInfo);
+    productsItem(itemInfo, productsTable);
   }
 
   for (let i = 0; i < filter.length; i++) {
@@ -663,9 +667,9 @@ const productsFilter = (option) => {
       (productsHeadline[i] && productsHeadline[i].type === item) ||
       (productsHeadline[i] && productsHeadline[i].category === item)
     ) {
-      productsHeader.innerHTML = `<div class='products__info'><h2 class="heading-sub">Products</h2><h3 class='heading-secondary'>${productsHeadline[i].title} Line</h3><p class='products__info--solution'>${productsHeadline[i].solution}</p><p class='products__info--description'>${productsHeadline[i].description}</p></div><div class='products__img'></div>`;
+      productsHeader.innerHTML = `<div class='products__info'><h2 class="heading-sub">Products</h2><h3 class='heading-secondary'>${productsHeadline[i].title} Line</h3><p class='products__info--solution'>${productsHeadline[i].solution}</p><p class='products__info--description'>${productsHeadline[i].description}</p></div><div class='products__header--img'></div>`;
 
-      const productsHeaderBg = document.querySelector('.products__img');
+      const productsHeaderBg = document.querySelector('.products__header--img');
 
       productsHeaderBg.style.backgroundImage = `linear-gradient(
         90deg,
@@ -686,15 +690,9 @@ const productsFilter = (option) => {
   return;
 };
 
-// category.addEventListener('change', () => productsFilter(category, 'category'));
-
-// skinConcerns.addEventListener('change', () =>
-//   productsFilter(skinConcerns, 'type')
-// );
-
+// FILTER SELECTION EVENT
 filter.addEventListener('change', () => {
   const option = filter.querySelectorAll('option:checked');
 
   productsFilter(option);
 });
-// () => productsFilter(option, 'source')
