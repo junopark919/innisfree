@@ -627,13 +627,22 @@ const newLine = productsList.filter((product) => product.new === true);
 const productsItem = (item, table) => {
   for (let i = 0; i < item.length; i++) {
     table.innerHTML += `<div class='products__table--item'>
+        ${
+          item[i].best
+            ? `<span class='products__badge'>BEST</span>`
+            : item[i].new
+            ? `<span class='products__badge'>NEW</span>`
+            : ''
+        }
         <img src=${item[i].img} alt=${item[i].name} class='products__img' />
         <p class='products__title'>${item[i].name}</p>
         <p class='products__price'>$${item[i].price}</p>
-        <a class='products__cart ${item[i].stock ? '' : 'out-of-stock'}'>${
+        <a class='btn products__cart ${item[i].stock ? '' : 'out-of-stock'}'>${
       item[i].stock ? 'Add Cart' : 'Out of Stock'
     }</a></div>`;
   }
+
+  table.scrollTo(0, 0);
 };
 
 // NEW LINE LIST
@@ -695,4 +704,43 @@ filter.addEventListener('change', () => {
   const option = filter.querySelectorAll('option:checked');
 
   productsFilter(option);
+});
+
+const productsCart = document.querySelectorAll('.products__cart');
+const headerCart = document.querySelector('.header__user > li');
+
+let countItem = 0;
+
+for (let i = 0; i < productsCart.length; i++) {
+  productsCart[i].addEventListener('click', (e) => {
+    if (productsCart[i].classList.contains('out-of-stock')) {
+      return;
+    } else {
+      countItem++;
+
+      headerCart.innerHTML = `<img src="img/icon-cart.svg" alt="Cart" /><span class="cart__badge"
+    >${countItem}</span>`;
+    }
+  });
+}
+
+// Newsletter
+const newsletterSubmit = document.querySelector('.newsletter__submit');
+const email = document.querySelector('#email');
+const agree = document.querySelector('#agree');
+
+newsletterSubmit.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if (agree.checked && email.validity.valid) {
+    window.alert('Subscribed!');
+    email.value = '';
+    agree.checked = false;
+  } else if (!agree.checked && email.validity.valid) {
+    window.alert('Please check the agreement');
+  } else if (agree.checked && !email.validity.valid) {
+    window.alert('Please enter your email address');
+  } else {
+    window.alert('Please enter your email address and check the agreement');
+  }
 });

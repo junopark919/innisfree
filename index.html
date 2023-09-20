@@ -20,6 +20,12 @@
           </li>
           <li><a href="#section-contact">Contact</a></li>
         </ul>
+        <ul class="header__user">
+          <li>
+            <img src="img/icon-cart.svg" alt="Cart" />
+          </li>
+          <li><img src="img/icon-user.svg" alt="User" /></li>
+        </ul>
       </nav>
     </header>
 
@@ -35,11 +41,12 @@
               The premium natural beauty from this mysterious island in South
               Korea.
             </p>
-            <a class="btn btn--outline" href="#section-about">Explore</a>
-            <a class="btn btn--full" href="#section-products">Shop now</a>
+            <a class="cta cta--outline" href="#section-about">Explore</a>
+            <a class="cta cta--full" href="#section-products">Shop now</a>
             <div class="hero__stores">
               <img src="img/hero/logo-sephora.png" alt="Sephora" />
               <img src="img/hero/logo-amazon.svg" alt="Amazon" />
+              <img src="img/hero/logo-walmart.svg" alt="Walmart" />
             </div>
           </div>
           <img
@@ -88,7 +95,7 @@
           <div class="new__content">
             <h2 class="heading-sub">What's new</h2>
             <h3 class="heading-secondary">
-              Dewy Glow Jelly Cream ($26)<br /><span
+              Dewy Glow Jelly Cream — $26<br /><span
                 ><i>with Jeju cherry blossom</i></span
               >
             </h3>
@@ -96,7 +103,12 @@
               Layer Jelly Cream on generously for an added boost of hydration
               and glow!
             </p>
-            <a class="btn btn--outline" href="#section-about">Learn more</a>
+            <ul class="new__ingredients">
+              <li><span>Cherry Blossom Flavonoids</span>: visibly soothing</li>
+              <li><span>Niacinamide</span>: visibly brightening</li>
+              <li><span>Sugar Beet Betaine</span>: hydrating</li>
+            </ul>
+            <a class="cta cta--full" href="#">Learn more</a>
           </div>
           <div class="new-line">
             <h3 class="heading-secondary">Our Latest Products</h3>
@@ -147,7 +159,7 @@
                 ingredients from Jeju Island.
               </p>
             </li>
-            <li>
+            <li class="offer__list--item">
               <img
                 src="img/about/icon-balanced.png"
                 alt="Balance scale"
@@ -159,7 +171,7 @@
                 all skin types and concerns.
               </p>
             </li>
-            <li>
+            <li class="offer__list--item">
               <img
                 src="img/about/icon-refreshing.png"
                 alt="Meditator"
@@ -170,7 +182,7 @@
                 Offer a sensorial escape through the wonders of Jeju Island.
               </p>
             </li>
-            <li>
+            <li class="offer__list--item">
               <img
                 src="img/about/icon-sustainable.png"
                 alt="Planet Earth"
@@ -248,21 +260,37 @@
       <!-- CONTACT -->
       <section class="section-contact" id="section-contact">
         <article class="contact container">
-          <form class="contact__form">
+          <form class="newsletter__form">
             <h2 class="heading-sub">Contact Us</h2>
             <h3 class="heading-secondary">Subscribe to Our Newsletter</h3>
-            <div class="form__part">
+            <div class="newsletter__input">
               <label for="email">E-mail</label>
-              <input type="email" id="email" placeholder="Enter your e-mail" />
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your e-mail"
+                required
+              />
             </div>
-            <div class="form__part">
-              <input type="checkbox" id="agree" /><label for="agree"
+            <div class="newsletter__input">
+              <input type="checkbox" id="agree" required /><label for="agree"
                 >By checking this box, I agree to receive newsletters containing
                 beauty tips, exclusive offers, and product updates.</label
               >
             </div>
-            <button type="submit">Subscribe</button>
+            <button type="submit" class="btn newsletter__submit">
+              Subscribe
+            </button>
           </form>
+          <p>
+            We're here to help! Please email us at
+            <a href="mailto: innisfree@apus.amorepacific.com"
+              >innisfree@apus.amorepacific.com</a
+            >
+            for any questions you might have. Due to a high volume of orders
+            following the promotional period, our customer service team will
+            respond to your request within 3-5 business days.
+          </p>
         </article>
       </section>
     </main>
@@ -303,8 +331,36 @@
         <p class="copyright">
           Copyright &copy; 2023 AMOREPACIFIC US Inc. All rights reserved
         </p>
+        <ul class="social-media">
+          <li>
+            <a href="https://www.facebook.com/innisfreeusa/" target="_blank"
+              ><img src="img/icon-facebook.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/innisfreeusa/" target="_blank"
+              ><img src="img/icon-instagram.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCAkqA-8MSRzOGEghmj3aseg"
+              target="_blank"
+              ><img src="img/icon-youtube.png" alt="YouTube"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@innisfreeusa" target="_blank"
+              ><img src="img/icon-tiktok.png" alt="TikTok"
+            /></a>
+          </li>
+        </ul>
       </div>
     </footer>
+    <!-- <div class="tab">
+      <div class="tab__bg"></div>
+      <div class="tab__info"></div>
+    </div> -->
 
     <script src="script.js"></script>
   </body>
