@@ -1,0 +1,91 @@
+// PRODUCTS
+.products__table {
+  height: 50rem;
+  overflow: auto;
+  padding: 1.6rem;
+  column-gap: 2.4rem;
+
+  &::-webkit-scrollbar {
+    background: $color-bg;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary-green;
+    border-radius: 10px;
+    @include shadow;
+  }
+}
+
+.products__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-white;
+  border-radius: 10px;
+  gap: 1.2rem;
+  padding: 1.6rem;
+  position: relative;
+  @include shadow;
+  opacity: 0;
+  animation: 1s bottom-to-top;
+  animation-fill-mode: forwards;
+
+  &--badge {
+    padding: 0.3rem 0.8rem;
+    background-color: $color-primary-red;
+    color: $color-white;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+  }
+
+  &--img {
+    width: 100%;
+  }
+
+  &--title {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &--cart {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    @include shadow;
+  }
+
+  .out-of-stock {
+    background-color: $color-primary-dark;
+    border: 1px solid $color-primary-dark;
+    cursor: default;
+  }
+}
+
+// NAVIGATION BAR MODE
+.normal-mode {
+  position: absolute;
+  height: 8.4rem;
+  background-color: transparent;
+}
+
+.sticky-mode {
+  position: fixed;
+  z-index: 1;
+  height: 5.2rem;
+  background-color: $color-bg;
+
+  .header__nav {
+    &--list {
+      a:link::after,
+      a:visited::after {
+        top: 1.2rem;
+      }
+    }
+  }
+}

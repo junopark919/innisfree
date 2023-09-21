@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap'); // GUIDLINES
+
+// FONT-SIZE: 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 42 / 48 / 60 / 72 / 84
+
+body {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 400;
+  color: $color-type;
+  line-height: 1.5;
+  background-color: $color-bg;
+  font-size: 1.8rem;
+}
+
+.heading-primary {
+  font-size: 4.8rem;
+  line-height: 1.3;
+  color: $color-primary-green;
+  margin-bottom: 3.6rem;
+  text-transform: uppercase;
+}
+
+.heading-sub {
+  font-size: 1.6rem;
+  color: $color-primary-red;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  color: $color-primary-green;
+  margin-bottom: 4.8rem;
+}

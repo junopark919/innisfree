@@ -1,0 +1,53 @@
+.contact {
+  background: url('img/contact/bg.png');
+  background-size: cover;
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6.4rem;
+
+    &--input {
+      margin-bottom: 2rem;
+
+      input {
+        padding: 1.2rem;
+        font-size: 1.8rem;
+        border-radius: 10px;
+      }
+
+      #agree {
+        margin-right: 1.2rem;
+      }
+
+      #email {
+        width: 60rem;
+      }
+    }
+
+    &--submit {
+      font-size: 1.8rem;
+      width: 15rem;
+      padding: 1.2rem 1.6rem;
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__email {
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: $color-primary-red;
+      font-style: italic;
+    }
+
+    a:hover,
+    a:active {
+      text-decoration: underline;
+    }
+  }
+}

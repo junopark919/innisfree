@@ -8,19 +8,22 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header normal">
-      <!-- Navigation -->
+    <header class="header normal-mode">
+      <!-- NAVIGATION BAR -->
       <nav class="header__nav container grid grid__cols--3">
         <img src="img/logo.svg" alt="innisfree logo" class="header__logo" />
-        <ul class="header__nav-list">
+        <ul class="header__nav--menu">
           <li><a href="#">Home</a></li>
+          <li>
+            <a href="#section-new">New</a>
+          </li>
           <li><a href="#section-about">About</a></li>
           <li>
             <a href="#section-products">Products</a>
           </li>
           <li><a href="#section-contact">Contact</a></li>
         </ul>
-        <ul class="header__user">
+        <ul class="header__nav--user">
           <li>
             <img src="img/icon-cart.svg" alt="Cart" />
           </li>
@@ -31,7 +34,7 @@
 
     <main>
       <!-- HERO SECTION -->
-      <section class="section-hero">
+      <section class="hero">
         <div class="container grid grid__cols--2">
           <div class="hero__headline">
             <h1 class="heading-primary">
@@ -42,8 +45,8 @@
               Korea.
             </p>
             <a class="cta cta--outline" href="#section-about">Explore</a>
-            <a class="cta cta--full" href="#section-products">Shop now</a>
-            <div class="hero__stores">
+            <a class="cta cta--fill" href="#section-products">Shop now</a>
+            <div class="hero__headline--stores">
               <img src="img/hero/logo-sephora.png" alt="Sephora" />
               <img src="img/hero/logo-amazon.svg" alt="Amazon" />
               <img src="img/hero/logo-walmart.svg" alt="Walmart" />
@@ -58,76 +61,57 @@
       </section>
 
       <!-- FEATURED SECTION -->
-      <section class="section-featured">
+      <section class="featured">
         <div class="container grid grid__cols--5">
-          <img
-            src="img/featured/logo-vogue.svg"
-            alt="Vogue"
-            class="featured__logo--item"
-          />
-          <img
-            src="img/featured/logo-allure.svg"
-            alt="Allure"
-            class="featured__logo--item"
-          />
-          <img
-            src="img/featured/logo-vanity-fair.png"
-            alt="Vanity Fair"
-            class="featured__logo--item"
-          />
-          <img
-            src="img/featured/logo-cosmopolitan.png"
-            alt="Cosmopolitan"
-            class="featured__logo--item"
-          />
-          <img
-            src="img/featured/bazaar.png"
-            alt="GQ"
-            class="featured__logo--item"
-          />
+          <img src="img/featured/logo-vogue.svg" alt="Vogue" />
+          <img src="img/featured/logo-allure.svg" alt="Allure" />
+          <img src="img/featured/logo-vanity-fair.png" alt="Vanity Fair" />
+          <img src="img/featured/logo-cosmopolitan.png" alt="Cosmopolitan" />
+          <img src="img/featured/bazaar.png" alt="GQ" />
         </div>
       </section>
 
       <!-- NEW SECTION -->
-      <section class="section-new" id="section-new">
-        <article class="new container grid grid__cols--2">
-          <div class="new__image"></div>
-          <div class="new__content">
+      <section class="new" id="section-new">
+        <article class="container grid grid__cols--2">
+          <!-- PROMOTION -->
+          <div class="new-promotion__img"></div>
+          <div class="new-promotion__content">
             <h2 class="heading-sub">What's new</h2>
             <h3 class="heading-secondary">
               Dewy Glow Jelly Cream — $26<br /><span
                 ><i>with Jeju cherry blossom</i></span
               >
             </h3>
-            <p class="new__description">
+            <p class="new-promotion__content--description">
               Layer Jelly Cream on generously for an added boost of hydration
               and glow!
             </p>
-            <ul class="new__ingredients">
+            <ul class="new-promotion__content--ingredients">
               <li><span>Cherry Blossom Flavonoids</span>: visibly soothing</li>
               <li><span>Niacinamide</span>: visibly brightening</li>
               <li><span>Sugar Beet Betaine</span>: hydrating</li>
             </ul>
-            <a class="cta cta--full" href="#">Learn more</a>
+            <a class="cta cta--fill" href="#">Learn more</a>
           </div>
+          <!-- NEWLINE PRODUCTS -->
           <div class="new-line">
             <h3 class="heading-secondary">Our Latest Products</h3>
-            <div
-              class="products__table products__table--new-line grid grid__cols--4"
-            >
-              <!-- Products Item Card -->
+            <div class="new-line__table products__table grid grid__cols--4">
+              <!-- PRODUCTS ITEMS CARDS -->
             </div>
           </div>
         </article>
       </section>
 
       <!-- ABOUT SECTION -->
-      <section class="section-about" id="section-about">
-        <article class="about__brand container grid grid__cols--2">
-          <div class="brand__content">
+      <section class="about" id="section-about">
+        <article class="container grid grid__cols--2">
+          <!-- ABOUT BRAND -->
+          <div class="about__content">
             <h2 class="heading-sub">About us</h2>
             <h3 class="heading-secondary">Natural Benefits from Jeju Island</h3>
-            <p class="brand__description">
+            <p class="about__content--description">
               We offer innovative beauty solutions powered by the finest natural
               ingredients responsibly sourced from Korea’s pristine Jeju
               Island.<br /><br />
@@ -142,52 +126,34 @@
               to preserve and protect the environment in all that we do.
             </p>
           </div>
-          <div class="brand__img"></div>
-        </article>
-
-        <article class="about__offer container">
-          <ul class="offer__list grid grid__cols--4">
-            <li class="offer__list--item">
-              <img
-                src="img/about/icon-skin-friendly.png"
-                alt="healthy skin"
-                class="offer__list--icon"
-              />
+          <div class="about__content--img"></div>
+          <!-- ABOUT OFFERS -->
+          <ul class="about__offer grid grid__cols--4">
+            <li>
+              <img src="img/about/icon-skin-friendly.png" alt="healthy skin" />
               <h4>Skin-friendly</h4>
               <p>
                 Promote healthy-looking skin with sustainably-sourced
                 ingredients from Jeju Island.
               </p>
             </li>
-            <li class="offer__list--item">
-              <img
-                src="img/about/icon-balanced.png"
-                alt="Balance scale"
-                class="offer__list--icon"
-              />
+            <li>
+              <img src="img/about/icon-balanced.png" alt="Balance scale" />
               <h4>Balanced</h4>
               <p>
                 Provide innovative and reasonably-priced skin care solutions for
                 all skin types and concerns.
               </p>
             </li>
-            <li class="offer__list--item">
-              <img
-                src="img/about/icon-refreshing.png"
-                alt="Meditator"
-                class="offer__list--icon"
-              />
+            <li>
+              <img src="img/about/icon-refreshing.png" alt="Meditator" />
               <h4>Refreshing</h4>
               <p>
                 Offer a sensorial escape through the wonders of Jeju Island.
               </p>
             </li>
-            <li class="offer__list--item">
-              <img
-                src="img/about/icon-sustainable.png"
-                alt="Planet Earth"
-                class="offer__list--icon"
-              />
+            <li>
+              <img src="img/about/icon-sustainable.png" alt="Planet Earth" />
               <h4>Sustainable</h4>
               <p>
                 Preserve and protect nature’s vitality through eco-conscious
@@ -199,25 +165,23 @@
       </section>
 
       <!-- PRODUCTS -->
-      <section class="section-products" id="section-products">
-        <article class="products container">
-          <!-- Products Line Header -->
-          <div class="products__header grid grid__cols--2">
-            <div class="products__info">
-              <h2 class="heading-sub">Products</h2>
-              <h3 class="heading-secondary">Most-Loved Bestsellers Line</h3>
-              <p class="products__info--solution">for Your Favorites</p>
-              <p class="products__info--description">
-                Introducing our best-selling product line, a curated selection
-                of skincare essentials designed to transform your daily routine.
-                These customer-favorite products have captured the hearts of
-                countless individuals, delivering effective solutions for a wide
-                range of skin types and concerns.
-              </p>
-            </div>
-            <div class="products__header--img"></div>
+      <section class="products" id="section-products">
+        <article class="container grid grid__cols--2">
+          <!-- PRODUCTS LINES HEADER -->
+          <div class="products__header">
+            <h2 class="heading-sub">Products</h2>
+            <h3 class="heading-secondary">Most-Loved Bestsellers Line</h3>
+            <p class="products__header--solution">for Your Favorites</p>
+            <p class="products__header--description">
+              Introducing our best-selling product line, a curated selection of
+              skincare essentials designed to transform your daily routine.
+              These customer-favorite products have captured the hearts of
+              countless individuals, delivering effective solutions for a wide
+              range of skin types and concerns.
+            </p>
           </div>
-          <!-- Products Filter -->
+          <div class="products__header--img"></div>
+          <!-- PRODUCTS FILTER -->
           <div class="products__filter">
             <select class="products__filter--option">
               <optgroup label="Featured">
@@ -250,20 +214,20 @@
               </optgroup>
             </select>
           </div>
-          <!-- Products Item List -->
-          <div class="products__table products__table--all grid grid__cols--4">
-            <!-- Products Item Card -->
+          <!-- PRODUCTS -->
+          <div class="products-shop__table products__table grid grid__cols--4">
+            <!-- PRODUCTS ITEMS CARDS -->
           </div>
         </article>
       </section>
 
-      <!-- CONTACT -->
-      <section class="section-contact" id="section-contact">
-        <article class="contact container">
-          <form class="newsletter__form">
+      <!-- CONTACT SECTION -->
+      <section class="contact" id="section-contact">
+        <article class="container">
+          <form class="contact__form">
             <h2 class="heading-sub">Contact Us</h2>
             <h3 class="heading-secondary">Subscribe to Our Newsletter</h3>
-            <div class="newsletter__input">
+            <div class="contact__form--input">
               <label for="email">E-mail</label>
               <input
                 type="email"
@@ -272,17 +236,17 @@
                 required
               />
             </div>
-            <div class="newsletter__input">
+            <div class="contact__form--input">
               <input type="checkbox" id="agree" required /><label for="agree"
                 >By checking this box, I agree to receive newsletters containing
                 beauty tips, exclusive offers, and product updates.</label
               >
             </div>
-            <button type="submit" class="btn newsletter__submit">
+            <button type="submit" class="contact__form--submit btn">
               Subscribe
             </button>
           </form>
-          <p>
+          <p class="contact__email">
             We're here to help! Please email us at
             <a href="mailto: innisfree@apus.amorepacific.com"
               >innisfree@apus.amorepacific.com</a
@@ -328,10 +292,10 @@
             <li>Membership Terms</li>
           </ul>
         </nav>
-        <p class="copyright">
+        <p class="footer__copyright">
           Copyright &copy; 2023 AMOREPACIFIC US Inc. All rights reserved
         </p>
-        <ul class="social-media">
+        <ul class="footer__social-media">
           <li>
             <a href="https://www.facebook.com/innisfreeusa/" target="_blank"
               ><img src="img/icon-facebook.png" alt="Facebook"

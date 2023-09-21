@@ -603,18 +603,18 @@ const nav = document.querySelector('.header');
 
 window.onscroll = (e) => {
   if (window.scrollY) {
-    nav.classList.remove('normal');
-    nav.classList.add('sticky');
+    nav.classList.remove('normal-mode');
+    nav.classList.add('sticky-mode');
   } else {
-    nav.classList.remove('sticky');
-    nav.classList.add('normal');
+    nav.classList.remove('sticky-mode');
+    nav.classList.add('normal-mode');
   }
 };
 
 // PRODUCTS ELEMENTS
 const productsHeader = document.querySelector('.products__header');
-const productsTable = document.querySelector('.products__table--all');
-const newLineTable = document.querySelector('.products__table--new-line');
+const productsTable = document.querySelector('.products-shop__table');
+const newLineTable = document.querySelector('.new-line__table');
 
 // PRODUCTS FILTER OPTION
 const filter = document.querySelector('.products__filter--option');
@@ -626,20 +626,22 @@ const newLine = productsList.filter((product) => product.new === true);
 // PRODUCTS ITEMS FUNCTION
 const productsItem = (item, table) => {
   for (let i = 0; i < item.length; i++) {
-    table.innerHTML += `<div class='products__table--item'>
+    table.innerHTML += `<div class='products__card'>
         ${
           item[i].best
-            ? `<span class='products__badge'>BEST</span>`
+            ? `<span class='products__card--badge'>BEST</span>`
             : item[i].new
-            ? `<span class='products__badge'>NEW</span>`
+            ? `<span class='products__card--badge'>NEW</span>`
             : ''
         }
-        <img src=${item[i].img} alt=${item[i].name} class='products__img' />
-        <p class='products__title'>${item[i].name}</p>
-        <p class='products__price'>$${item[i].price}</p>
-        <a class='btn products__cart ${item[i].stock ? '' : 'out-of-stock'}'>${
-      item[i].stock ? 'Add Cart' : 'Out of Stock'
-    }</a></div>`;
+        <img src=${item[i].img} alt=${
+      item[i].name
+    } class='products__card--img' />
+        <p class='products__card--title'>${item[i].name}</p>
+        <p class='products__card--price'>$${item[i].price}</p>
+        <a class='btn products__card--cart ${
+          item[i].stock ? '' : 'out-of-stock'
+        }'>${item[i].stock ? 'Add Cart' : 'Out of Stock'}</a></div>`;
   }
 
   table.scrollTo(0, 0);
@@ -676,7 +678,7 @@ const productsFilter = (option) => {
       (productsHeadline[i] && productsHeadline[i].type === item) ||
       (productsHeadline[i] && productsHeadline[i].category === item)
     ) {
-      productsHeader.innerHTML = `<div class='products__info'><h2 class="heading-sub">Products</h2><h3 class='heading-secondary'>${productsHeadline[i].title} Line</h3><p class='products__info--solution'>${productsHeadline[i].solution}</p><p class='products__info--description'>${productsHeadline[i].description}</p></div><div class='products__header--img'></div>`;
+      productsHeader.innerHTML = `<div class='products__header'><h2 class="heading-sub">Products</h2><h3 class='heading-secondary'>${productsHeadline[i].title} Line</h3><p class='products__header--solution'>${productsHeadline[i].solution}</p><p class='products__header--description'>${productsHeadline[i].description}</p></div><div class='products__header---img'></div>`;
 
       const productsHeaderBg = document.querySelector('.products__header--img');
 
@@ -706,8 +708,8 @@ filter.addEventListener('change', () => {
   productsFilter(option);
 });
 
-const productsCart = document.querySelectorAll('.products__cart');
-const headerCart = document.querySelector('.header__user > li');
+const productsCart = document.querySelectorAll('.products__card--cart');
+const headerCart = document.querySelector('.header__nav--user > li');
 
 let countItem = 0;
 
@@ -724,8 +726,8 @@ for (let i = 0; i < productsCart.length; i++) {
   });
 }
 
-// Newsletter
-const newsletterSubmit = document.querySelector('.newsletter__submit');
+// NEWSLETTER
+const newsletterSubmit = document.querySelector('.contact__form--submit');
 const email = document.querySelector('#email');
 const agree = document.querySelector('#agree');
 
@@ -736,11 +738,14 @@ newsletterSubmit.addEventListener('click', (e) => {
     window.alert('Subscribed!');
     email.value = '';
     agree.checked = false;
+    email.style.backgroundColor = '#fff';
   } else if (!agree.checked && email.validity.valid) {
     window.alert('Please check the agreement');
   } else if (agree.checked && !email.validity.valid) {
     window.alert('Please enter your email address');
+    email.style.backgroundColor = '#ebcccc';
   } else {
     window.alert('Please enter your email address and check the agreement');
+    email.style.backgroundColor = '#ebcccc';
   }
 });
