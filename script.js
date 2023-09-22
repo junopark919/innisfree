@@ -613,8 +613,8 @@ window.onscroll = (e) => {
 
 // PRODUCTS ELEMENTS
 const productsHeader = document.querySelector('.products__header');
-const productsTable = document.querySelector('.products-shop__table');
-const newLineTable = document.querySelector('.new-line__table');
+const productsTable = document.querySelector('.products__browse--table');
+const newLineTable = document.querySelector('.new__line--table');
 
 // PRODUCTS FILTER OPTION
 const filter = document.querySelector('.products__filter--option');
@@ -695,6 +695,9 @@ const productsFilter = (option) => {
           : 'bottom right 25%'
       }`;
       productsHeaderBg.style.backgroundSize = 'cover';
+      productsHeaderBg.animate([{ opacity: '0' }, { opacity: '1' }], {
+        duration: 800,
+      });
     }
   }
 

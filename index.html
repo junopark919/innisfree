@@ -11,7 +11,11 @@
     <header class="header normal-mode">
       <!-- NAVIGATION BAR -->
       <nav class="header__nav container grid grid__cols--3">
-        <img src="img/logo.svg" alt="innisfree logo" class="header__logo" />
+        <img
+          src="img/header/logo.svg"
+          alt="innisfree logo"
+          class="header__logo"
+        />
         <ul class="header__nav--menu">
           <li><a href="#">Home</a></li>
           <li>
@@ -25,9 +29,9 @@
         </ul>
         <ul class="header__nav--user">
           <li>
-            <img src="img/icon-cart.svg" alt="Cart" />
+            <img src="img/header/icon-cart.svg" alt="Cart" />
           </li>
-          <li><img src="img/icon-user.svg" alt="User" /></li>
+          <li><img src="img/header/icon-user.svg" alt="User" /></li>
         </ul>
       </nav>
     </header>
@@ -41,8 +45,9 @@
               Have You Heard of the Secret of Jeju Island?
             </h1>
             <p class="hero__headline--sub">
-              The premium natural beauty from this mysterious island in South
-              Korea.
+              Clear fresh air, soft warm sunlight, fertile volcanic soil, pure
+              clean water... innisfree pursues healthy beauty through natural
+              ingredients from the pure Jeju Island.
             </p>
             <a class="cta cta--outline" href="#section-about">Explore</a>
             <a class="cta cta--fill" href="#section-products">Shop now</a>
@@ -52,11 +57,7 @@
               <img src="img/hero/logo-walmart.svg" alt="Walmart" />
             </div>
           </div>
-          <img
-            src="img/hero/hero.png"
-            alt="A female model holding Innisfree Green Tea Seed Serum"
-            class="hero__img"
-          />
+          <div class="hero__img"></div>
         </div>
       </section>
 
@@ -75,29 +76,24 @@
       <section class="new" id="section-new">
         <article class="container grid grid__cols--2">
           <!-- PROMOTION -->
-          <div class="new-promotion__img"></div>
-          <div class="new-promotion__content">
+          <div class="new__img"></div>
+          <div class="new__content">
             <h2 class="heading-sub">What's new</h2>
             <h3 class="heading-secondary">
-              Dewy Glow Jelly Cream — $26<br /><span
+              Dewy Glow Jelly Cream<br /><span
                 ><i>with Jeju cherry blossom</i></span
               >
             </h3>
-            <p class="new-promotion__content--description">
+            <p class="new__content--description">
               Layer Jelly Cream on generously for an added boost of hydration
               and glow!
             </p>
-            <ul class="new-promotion__content--ingredients">
-              <li><span>Cherry Blossom Flavonoids</span>: visibly soothing</li>
-              <li><span>Niacinamide</span>: visibly brightening</li>
-              <li><span>Sugar Beet Betaine</span>: hydrating</li>
-            </ul>
             <a class="cta cta--fill" href="#">Learn more</a>
           </div>
           <!-- NEWLINE PRODUCTS -->
-          <div class="new-line">
+          <div class="new__line">
             <h3 class="heading-secondary">Our Latest Products</h3>
-            <div class="new-line__table products__table grid grid__cols--4">
+            <div class="new__line--table products__table grid grid__cols--4">
               <!-- PRODUCTS ITEMS CARDS -->
             </div>
           </div>
@@ -215,7 +211,9 @@
             </select>
           </div>
           <!-- PRODUCTS -->
-          <div class="products-shop__table products__table grid grid__cols--4">
+          <div
+            class="products__browse--table products__table grid grid__cols--4"
+          >
             <!-- PRODUCTS ITEMS CARDS -->
           </div>
         </article>
@@ -232,7 +230,7 @@
               <input
                 type="email"
                 id="email"
-                placeholder="Enter your e-mail"
+                placeholder="Enter your e-mail address"
                 required
               />
             </div>
@@ -261,13 +259,13 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="container grid grid__cols--2">
+      <div class="container grid grid__cols--3">
         <img
-          src="img/logo-white.png"
+          src="img/footer/logo-white.png"
           alt="innisfree logo"
           class="footer__logo"
         />
-        <nav class="footer__nav grid grid__cols--3">
+        <nav class="footer__nav">
           <ul>
             <p>Customer Service</p>
             <li>FAQs</li>
@@ -298,24 +296,24 @@
         <ul class="footer__social-media">
           <li>
             <a href="https://www.facebook.com/innisfreeusa/" target="_blank"
-              ><img src="img/icon-facebook.png" alt="Facebook"
+              ><img src="img/footer/icon-facebook.png" alt="Facebook"
             /></a>
           </li>
           <li>
             <a href="https://www.instagram.com/innisfreeusa/" target="_blank"
-              ><img src="img/icon-instagram.png" alt="Instagram"
+              ><img src="img/footer/icon-instagram.png" alt="Instagram"
             /></a>
           </li>
           <li>
             <a
               href="https://www.youtube.com/channel/UCAkqA-8MSRzOGEghmj3aseg"
               target="_blank"
-              ><img src="img/icon-youtube.png" alt="YouTube"
+              ><img src="img/footer/icon-youtube.png" alt="YouTube"
             /></a>
           </li>
           <li>
             <a href="https://www.tiktok.com/@innisfreeusa" target="_blank"
-              ><img src="img/icon-tiktok.png" alt="TikTok"
+              ><img src="img/footer/icon-tiktok.png" alt="TikTok"
             /></a>
           </li>
         </ul>

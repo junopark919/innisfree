@@ -10,8 +10,11 @@
   }
 
   &__nav {
-    column-gap: 5.2rem;
-    font-size: 1.6rem;
+    grid-column: 2 / -1;
+    display: flex;
+    justify-content: end;
+    font-size: 1.4rem;
+    gap: 6.4rem;
 
     ul {
       list-style: none;
@@ -23,6 +26,10 @@
 
       li {
         cursor: pointer;
+
+        &:not(last-child) {
+          margin-bottom: 0.6rem;
+        }
       }
     }
   }
@@ -33,6 +40,7 @@
   }
 
   &__social-media {
+    grid-column: -2 / -1;
     list-style: none;
     display: flex;
     gap: 2.4rem;
