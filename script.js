@@ -12,6 +12,7 @@ const productsList = [
     new: true,
     stock: true,
     img: 'img/products/green-tea/cleanser.png',
+    inCart: 0,
   },
   {
     name: 'Green Tea Cleansing Oil',
@@ -23,6 +24,7 @@ const productsList = [
     new: true,
     stock: true,
     img: 'img/products/green-tea/cleansing-oil.png',
+    inCart: 0,
   },
   {
     name: 'Green Tea Micellar Cleansing Water',
@@ -34,6 +36,7 @@ const productsList = [
     new: true,
     stock: true,
     img: 'img/products/green-tea/cleansing-water.png',
+    inCart: 0,
   },
   {
     name: 'Green Tea Balancing Emulsion',
@@ -44,6 +47,7 @@ const productsList = [
     best: false,
     stock: false,
     img: 'img/products/green-tea/emulsion.png',
+    inCart: 0,
   },
   {
     name: 'Green Tea Balancing Cream',
@@ -55,6 +59,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/green-tea/cream00.png',
+    inCart: 0,
   },
   {
     name: 'Green Tea Hyaluronic Acid Toner',
@@ -66,6 +71,7 @@ const productsList = [
     new: true,
     stock: false,
     img: 'img/products/green-tea/toner.png',
+    inCart: 0,
   },
   {
     name: 'Green Tea Hyaluronic Acid Serum',
@@ -77,6 +83,7 @@ const productsList = [
     new: true,
     stock: true,
     img: 'img/products/green-tea/serum.png',
+    inCart: 0,
   },
   {
     name: 'Green Tea Caffeine Bright-Eye Serum',
@@ -88,6 +95,7 @@ const productsList = [
     new: true,
     stock: true,
     img: 'img/products/green-tea/eye-serum.png',
+    inCart: 0,
   },
   {
     name: 'Green Tea Hyaluronic Acid Eye Cream',
@@ -99,6 +107,7 @@ const productsList = [
     new: true,
     stock: true,
     img: 'img/products/green-tea/eye-cream.png',
+    inCart: 0,
   },
   {
     name: 'Green Tea Hyaluronic Acid Cream',
@@ -110,6 +119,7 @@ const productsList = [
     new: true,
     stock: true,
     img: 'img/products/green-tea/cream01.png',
+    inCart: 0,
   },
   {
     name: 'Pore Clearing Facial Foam',
@@ -121,6 +131,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/volcanic-clusters/facial-foam.png',
+    inCart: 0,
   },
   {
     name: 'Pore Clearing Cleansing Balm',
@@ -132,6 +143,7 @@ const productsList = [
     new: false,
     stock: false,
     img: 'img/products/volcanic-clusters/cleansing-balm.png',
+    inCart: 0,
   },
   {
     name: 'Pore Clearing Toner 2X',
@@ -143,6 +155,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/volcanic-clusters/toner.png',
+    inCart: 0,
   },
   {
     name: 'Pore Clearing Clay Peel Off Mask 2X',
@@ -154,6 +167,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/volcanic-clusters/peel-off-mask.png',
+    inCart: 0,
   },
   {
     name: 'Pore Clearing Clay Mask 2X',
@@ -165,6 +179,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/volcanic-clusters/clay-mask.png',
+    inCart: 0,
   },
   {
     name: 'Pore Clearing Clay Mousse Mask 2X',
@@ -176,6 +191,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/volcanic-clusters/mousse-mask.png',
+    inCart: 0,
   },
   {
     name: 'Dewy Glow Jam Cleanser',
@@ -187,6 +203,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/cherry-blossom/cleanser.png',
+    inCart: 0,
   },
   {
     name: 'Dewy Glow Toner',
@@ -198,6 +215,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/cherry-blossom/toner.png',
+    inCart: 0,
   },
   {
     name: 'Dewy Glow Mist',
@@ -209,6 +227,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/cherry-blossom/mist.png',
+    inCart: 0,
   },
   {
     name: 'Dewy Glow Emulsion',
@@ -220,6 +239,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/cherry-blossom/emulsion.png',
+    inCart: 0,
   },
   {
     name: 'Dewy Glow Jelly Cream',
@@ -231,6 +251,7 @@ const productsList = [
     new: true,
     stock: true,
     img: 'img/products/cherry-blossom/cream00.png',
+    inCart: 0,
   },
   {
     name: 'Dewy Glow Tone-up Cream',
@@ -242,6 +263,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/cherry-blossom/cream01.png',
+    inCart: 0,
   },
   {
     name: 'Youth-Enriched Toner',
@@ -253,6 +275,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/orchid/toner.png',
+    inCart: 0,
   },
   {
     name: 'Youth-Enriched Serum',
@@ -264,6 +287,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/orchid/serum.png',
+    inCart: 0,
   },
   {
     name: 'Youth-Enriched Emulsion',
@@ -275,6 +299,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/orchid/emulsion.png',
+    inCart: 0,
   },
   {
     name: 'Youth-Enriched Eye Cream',
@@ -286,6 +311,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/orchid/eye-cream.png',
+    inCart: 0,
   },
   {
     name: 'Youth-Enriched Gel Cream',
@@ -297,6 +323,7 @@ const productsList = [
     new: false,
     stock: false,
     img: 'img/products/orchid/cream00.png',
+    inCart: 0,
   },
   {
     name: 'Youth-Enriched Cream',
@@ -308,6 +335,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/orchid/cream01.png',
+    inCart: 0,
   },
   {
     name: 'Youth-Enriched Rich Cream',
@@ -319,6 +347,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/orchid/cream02.png',
+    inCart: 0,
   },
   {
     name: 'Brightening & Pore-caring Facial Cleanser',
@@ -330,6 +359,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/tangerine/cleanser.png',
+    inCart: 0,
   },
   {
     name: 'Brightening & Pore-caring Serum',
@@ -341,6 +371,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/tangerine/serum.png',
+    inCart: 0,
   },
   {
     name: 'Brightening & Pore-caring Cream',
@@ -352,6 +383,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/tangerine/cream.png',
+    inCart: 0,
   },
   {
     name: 'Youth Enhancing Treatment Essence',
@@ -363,6 +395,7 @@ const productsList = [
     new: true,
     stock: true,
     img: 'img/products/black-tea/essence.png',
+    inCart: 0,
   },
   {
     name: 'Youth Enhancing Serum',
@@ -374,6 +407,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/black-tea/serum.png',
+    inCart: 0,
   },
   {
     name: 'Youth Enhancing Cream',
@@ -385,6 +419,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/black-tea/cream.png',
+    inCart: 0,
   },
   {
     name: 'Clarifying Cleansing Foam',
@@ -396,6 +431,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/bija/cleansing-foam.png',
+    inCart: 0,
   },
   {
     name: 'Clarifying Toner',
@@ -407,6 +443,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/bija/toner.png',
+    inCart: 0,
   },
   {
     name: 'Cica Balm',
@@ -418,6 +455,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/bija/balm.png',
+    inCart: 0,
   },
   {
     name: 'Clarifying Spot Serum',
@@ -428,6 +466,7 @@ const productsList = [
     best: false,
     stock: false,
     img: 'img/products/bija/serum.png',
+    inCart: 0,
   },
   {
     name: 'Clarifying Emulsion',
@@ -439,6 +478,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/bija/emulsion.png',
+    inCart: 0,
   },
   {
     name: 'Nourishing Ampoule Toner',
@@ -450,6 +490,7 @@ const productsList = [
     new: false,
     stock: true,
     img: 'img/products/ginger-honey/toner.png',
+    inCart: 0,
   },
 ];
 
@@ -616,12 +657,43 @@ const productsHeader = document.querySelector('.products__header');
 const productsTable = document.querySelector('.products__browse--table');
 const newLineTable = document.querySelector('.new__line--table');
 
+// ADD CART
+let filtered;
+let productsCart;
+let countItem = 0;
+const headerCart = document.querySelector('.header__nav--user > li');
+
+const cart = () => {
+  countItem++;
+
+  headerCart.innerHTML = `<img src="img/header/icon-cart.svg" alt="Cart" /><span class="cart__badge"
+>${countItem}</span>`;
+};
+
 // PRODUCTS FILTER OPTION
 const filter = document.querySelector('.products__filter--option');
 
 // BEST PRODUCTS
 const best = productsList.filter((product) => product.best === true);
 const newLine = productsList.filter((product) => product.new === true);
+
+const cartClickHandler = (e) => {
+  const i = Array.from(productsCart).indexOf(e.currentTarget);
+
+  if (productsCart[i].classList.contains('out-of-stock')) {
+    return;
+  } else if (i < newLine.length) {
+    newLine[i].inCart ? newLine[i].inCart++ : (newLine[i].inCart = 1);
+    console.log(newLine[i]);
+    cart();
+  } else if (i >= newLine.length) {
+    filtered[i - newLine.length].inCart
+      ? filtered[i - newLine.length].inCart++
+      : (filtered[i - newLine.length].inCart = 1);
+    console.log(filtered[i - newLine.length]);
+    cart();
+  }
+};
 
 // PRODUCTS ITEMS FUNCTION
 const productsItem = (item, table) => {
@@ -643,6 +715,14 @@ const productsItem = (item, table) => {
           item[i].stock ? '' : 'out-of-stock'
         }'>${item[i].stock ? 'Add Cart' : 'Out of Stock'}</a></div>`;
   }
+
+  productsCart = document.querySelectorAll('.products__card--cart');
+  filtered = item;
+
+  productsCart.forEach((element) => {
+    element.removeEventListener('click', cartClickHandler);
+    element.addEventListener('click', cartClickHandler);
+  });
 
   table.scrollTo(0, 0);
 };
@@ -710,24 +790,6 @@ filter.addEventListener('change', () => {
 
   productsFilter(option);
 });
-
-const productsCart = document.querySelectorAll('.products__card--cart');
-const headerCart = document.querySelector('.header__nav--user > li');
-
-let countItem = 0;
-
-for (let i = 0; i < productsCart.length; i++) {
-  productsCart[i].addEventListener('click', (e) => {
-    if (productsCart[i].classList.contains('out-of-stock')) {
-      return;
-    } else {
-      countItem++;
-
-      headerCart.innerHTML = `<img src="img/icon-cart.svg" alt="Cart" /><span class="cart__badge"
-    >${countItem}</span>`;
-    }
-  });
-}
 
 // NEWSLETTER
 const newsletterSubmit = document.querySelector('.contact__form--submit');

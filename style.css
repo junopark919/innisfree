@@ -61,6 +61,20 @@ body {
   color: #004438;
   margin-bottom: 4.8rem; }
 
+.normal-mode {
+  position: absolute;
+  height: 8.4rem;
+  background-color: transparent; }
+
+.sticky-mode {
+  position: fixed;
+  z-index: 1;
+  height: 5.2rem;
+  background-color: #f7f7ee; }
+  .sticky-mode .header__nav--list a:link::after,
+  .sticky-mode .header__nav--list a:visited::after {
+    top: 1.2rem; }
+
 .cta {
   display: inline-block;
   text-align: center;
@@ -102,7 +116,7 @@ body {
   padding: 1.6rem;
   column-gap: 2.4rem; }
   .products__table::-webkit-scrollbar {
-    background: #f7f7ee;
+    background-color: #f7f7ee;
     border-radius: 10px; }
   .products__table::-webkit-scrollbar-thumb {
     background: #004438;
@@ -215,7 +229,8 @@ body {
   .contact__email a:visited {
     text-decoration: none;
     color: #990000;
-    font-style: italic; }
+    font-style: italic;
+    transition: 0.3s; }
   .contact__email a:hover,
   .contact__email a:active {
     text-decoration: underline; }
@@ -274,9 +289,6 @@ body {
   max-width: 144rem;
   width: 100%;
   padding: 0 2.4rem; }
-  @media (max-width: 57em) {
-    .container {
-      max-width: 102.4rem; } }
 
 .grid {
   display: grid;
@@ -287,8 +299,7 @@ body {
   .grid__cols--3 {
     grid-template-columns: repeat(3, 1fr); }
   .grid__cols--4 {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 6.4rem; }
+    grid-template-columns: repeat(4, 1fr); }
   .grid__cols--5 {
     grid-template-columns: repeat(5, 1fr);
     column-gap: 2.4rem; }
@@ -301,6 +312,7 @@ body {
   border-bottom: 1px solid #888873;
   transition: all 0.3s; }
   .header__nav {
+    grid-template-columns: 1fr 2fr 1fr;
     padding: 0 2.4rem;
     animation: nav-effect; }
     .header__nav--menu {
@@ -358,7 +370,8 @@ body {
           font-size: 1.2rem;
           position: absolute;
           top: -0.7rem;
-          right: -1.3rem; }
+          right: -1.3rem;
+          animation: 0.2s appear; }
   .header__logo {
     height: 2.4rem; }
 
@@ -465,17 +478,10 @@ body {
         display: inline-block;
         position: relative;
         left: -35rem; }
-    .new__line__table {
+    .new__line--table {
       height: 50rem;
       overflow: auto;
       padding: 1.6rem; }
-      .new__line__table::-webkit-scrollbar {
-        background: #f7f7ee;
-        border-radius: 10px; }
-      .new__line__table::-webkit-scrollbar-thumb {
-        background: #004438;
-        border-radius: 10px;
-        box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.05); }
 
 .products {
   display: flex;
@@ -511,17 +517,3 @@ body {
         line-height: 1.2; }
   .products__browse--table {
     grid-column: 1 / -1; }
-
-.normal-mode {
-  position: absolute;
-  height: 8.4rem;
-  background-color: transparent; }
-
-.sticky-mode {
-  position: fixed;
-  z-index: 1;
-  height: 5.2rem;
-  background-color: #f7f7ee; }
-  .sticky-mode .header__nav--list a:link::after,
-  .sticky-mode .header__nav--list a:visited::after {
-    top: 1.2rem; }

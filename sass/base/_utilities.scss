@@ -1,0 +1,22 @@
+// NAVIGATION BAR MODE
+.normal-mode {
+  position: absolute;
+  height: 8.4rem;
+  background-color: transparent;
+}
+
+.sticky-mode {
+  position: fixed;
+  z-index: 1;
+  height: 5.2rem;
+  background-color: $color-bg;
+
+  .header__nav {
+    &--list {
+      a:link::after,
+      a:visited::after {
+        top: 1.2rem;
+      }
+    }
+  }
+}

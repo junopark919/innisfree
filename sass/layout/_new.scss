@@ -68,20 +68,10 @@
       }
     }
 
-    &__table {
+    &--table {
       height: 50rem;
       overflow: auto;
       padding: 1.6rem;
-
-      &::-webkit-scrollbar {
-        background: $color-bg;
-        border-radius: 10px;
-      }
-      &::-webkit-scrollbar-thumb {
-        background: $color-primary-green;
-        border-radius: 10px;
-        @include shadow;
-      }
     }
   }
 }

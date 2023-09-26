@@ -2,10 +2,6 @@
   max-width: 144rem;
   width: 100%;
   padding: 0 2.4rem;
-
-  @media (max-width: 57em) {
-    max-width: 102.4rem;
-  }
 }
 
 .grid {
@@ -23,7 +19,6 @@
 
   &__cols--4 {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 6.4rem;
   }
 
   &__cols--5 {

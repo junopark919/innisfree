@@ -7,6 +7,7 @@
   transition: all 0.3s;
 
   &__nav {
+    grid-template-columns: 1fr 2fr 1fr;
     padding: 0 2.4rem;
     animation: nav-effect;
 
@@ -80,6 +81,7 @@
           position: absolute;
           top: -0.7rem;
           right: -1.3rem;
+          animation: 0.2s appear;
         }
       }
     }
